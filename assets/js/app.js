@@ -732,13 +732,11 @@ const app = {
 
     if (!this.searchQuery) {
       this.searchOpenedTopics.forEach((id) => {
-        if (!this.openTopics.has(id)) {
-          const card = this.cardMap[id];
-          if (card) {
-            const body = card.querySelector('.topic-body');
-            if (body.classList.contains('open')) {
-              this.toggleAccordion(card.querySelector('.header-area'));
-            }
+        const card = this.cardMap[id];
+        if (card) {
+          const body = card.querySelector('.topic-body');
+          if (body.classList.contains('open')) {
+            this.toggleAccordion(card.querySelector('.header-area'));
           }
         }
       });
