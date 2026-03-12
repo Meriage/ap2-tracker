@@ -710,5 +710,131 @@ window.ANKI_QUESTIONS = {
     { id: '3.3_58', q: 'Was ist "Infrastructure as Code" (IaC)?', a: 'Die Verwaltung und Bereitstellung der Infrastruktur (Server, Netze) über maschinenlesbare Definitionsdateien (z.B. Terraform, Ansible).' },
     { id: '3.3_59', q: 'Was bedeutet "Blue-Green Deployment"?', a: 'Ein Verfahren, bei dem zwei identische Umgebungen existieren; eine ist live (Blue), auf die andere wird das neue Release (Green) aufgespielt und dann umgeschaltet.' },
     { id: '3.3_60', q: 'Was ist ein "Linter"?', a: 'Ein Tool, das den Quellcode statisch auf Stilfehler, potenzielle Bugs oder Formatierungsregeln prüft.' }
+  ],
+
+  // Topic 3.4: Datenschutz (DSGVO) & Recht (50 Karten)
+  '3.4': [
+    // --- Unterpunkt 1: DSGVO-Prinzipien (10 Karten) ---
+    { id: '3.4_1', q: 'Was besagt das Prinzip der "Zweckbindung"?', a: 'Personenbezogene Daten dürfen nur für festgelegte, eindeutige und rechtmäßige Zwecke erhoben werden.' },
+    { id: '3.4_2', q: 'Was bedeutet "Datensparsamkeit" (Datenminimierung)?', a: 'Es dürfen nur so viele Daten erhoben werden, wie für den jeweiligen Zweck unbedingt notwendig sind.' },
+    { id: '3.4_3', q: 'Was beschreibt das Prinzip der "Transparenz" in der DSGVO?', a: 'Betroffene müssen in leicht verständlicher Form darüber informiert werden, wer welche Daten wie und warum verarbeitet.' },
+    { id: '3.4_4', q: 'Was ist das Prinzip der "Richtigkeit"?', a: 'Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls auf dem neuesten Stand sein.' },
+    { id: '3.4_5', q: 'Was besagt die "Speicherbegrenzung"?', a: 'Daten müssen gelöscht oder anonymisiert werden, sobald sie für den Zweck der Verarbeitung nicht mehr benötigt werden.' },
+    { id: '3.4_6', q: 'Was bedeutet "Integrität und Vertraulichkeit" im DSGVO-Kontext?', a: 'Daten müssen durch angemessene Sicherheit (z.B. Verschlüsselung) vor unbefugter Verarbeitung und Verlust geschützt werden.' },
+    { id: '3.4_7', q: 'Was ist die "Rechenschaftspflicht" (Accountability)?', a: 'Der Verantwortliche muss nachweisen können, dass er die DSGVO-Prinzipien einhält (Dokumentationspflicht).' },
+    { id: '3.4_8', q: 'Was gilt als "personenbezogene Daten"?', a: 'Alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen (z.B. Name, IP-Adresse, E-Mail).' },
+    { id: '3.4_9', q: 'Was ist "Privacy by Design"?', a: 'Datenschutz durch Technikgestaltung: Datenschutzaspekte werden bereits bei der Entwicklung eines Systems berücksichtigt.' },
+    { id: '3.4_10', q: 'Was ist "Privacy by Default"?', a: 'Datenschutzfreundliche Voreinstellungen: Ab Werk sind nur die Datenverarbeitungen aktiv, die für den Zweck nötig sind.' },
+
+    // --- Unterpunkt 2: Rechte der Betroffenen (10 Karten) ---
+    { id: '3.4_11', q: 'Was umfasst das "Recht auf Auskunft" (Art. 15)?', a: 'Der Betroffene darf erfahren, ob und welche Daten über ihn gespeichert sind und zu welchem Zweck.' },
+    { id: '3.4_12', q: 'Was ist das "Recht auf Löschung" (Recht auf Vergessenwerden)?', a: 'Daten müssen gelöscht werden, wenn sie nicht mehr nötig sind oder die Einwilligung widerrufen wurde (sofern keine gesetzliche Aufbewahrungsfrist vorliegt).' },
+    { id: '3.4_13', q: 'Was bedeutet das "Recht auf Datenübertragbarkeit" (Portabilität)?', a: 'Nutzer können verlangen, ihre Daten in einem gängigen, maschinenlesbaren Format zu erhalten, um sie zu einem anderen Anbieter mitzunehmen.' },
+    { id: '3.4_14', q: 'Was ist das "Recht auf Berichtigung"?', a: 'Unverzügliche Korrektur unrichtiger oder Ergänzung unvollständiger personenbezogener Daten.' },
+    { id: '3.4_15', q: 'Was bewirkt das "Recht auf Einschränkung der Verarbeitung"?', a: 'Die Daten bleiben gespeichert, dürfen aber ohne Einwilligung des Betroffenen nicht mehr genutzt (nur noch markiert) werden.' },
+    { id: '3.4_16', q: 'Was ist das "Widerspruchsrecht" (Art. 21)?', a: 'Betroffene können der Verarbeitung ihrer Daten aus Gründen ihrer besonderen Situation widersprechen (besonders bei Direktwerbung).' },
+    { id: '3.4_17', q: 'Welche Pflicht hat ein Unternehmen bei einer Datenpanne?', a: 'Meldung an die Aufsichtsbehörde innerhalb von 72 Stunden, falls ein Risiko für die Rechte der Betroffenen besteht.' },
+    { id: '3.4_18', q: 'Muss die Auskunftserteilung an einen Betroffenen kostenpflichtig sein?', a: 'Nein, die erste Auskunft muss in der Regel unentgeltlich (kostenlos) erfolgen.' },
+    { id: '3.4_19', q: 'Was ist ein "automatisierte Entscheidung im Einzelfall" (Profiling)?', a: 'Entscheidungen, die ohne menschliches Eingreifen rein auf Algorithmen basieren (z.B. Kreditwürdigkeit); Betroffene haben hier besondere Rechte.' },
+    { id: '3.4_20', q: 'Wo können sich Betroffene beschweren, wenn sie ihre Rechte verletzt sehen?', a: 'Bei der zuständigen Datenschutz-Aufsichtsbehörde (Landesdatenschutzbeauftragter).' },
+
+    // --- Unterpunkt 3: TOMs - Technisch-organisatorische Maßnahmen (10 Karten) ---
+    { id: '3.4_21', q: 'Was sind "Technische Maßnahmen" bei den TOMs?', a: 'Physische oder digitale Schutzvorkehrungen, z.B. Alarmanlagen, Firewalls, Verschlüsselung oder Backup-Systeme.' },
+    { id: '3.4_22', q: 'Was sind "Organisatorische Maßnahmen" bei den TOMs?', a: 'Regelungen und Anweisungen für Menschen, z.B. Zutrittskontrollkonzepte, Schulungen oder Passwort-Richtlinien.' },
+    { id: '3.4_23', q: 'Zweck der "Zutrittskontrolle"?', a: 'Unbefugte am Betreten der Räumlichkeiten (Rechenzentrum, Büro) hindern, z.B. durch Chipkarten oder Pförtner.' },
+    { id: '3.4_24', q: 'Zweck der "Zugangskontrolle"?', a: 'Unbefugte an der Nutzung von Systemen hindern, z.B. durch Benutzername und Passwort.' },
+    { id: '3.4_25', q: 'Zweck der "Zugriffskontrolle"?', a: 'Sicherstellen, dass berechtigte Nutzer nur auf die Daten zugreifen können, für die sie eine Erlaubnis haben (Rechtemanagement).' },
+    { id: '3.4_26', q: 'Was versteht man unter "Weitergabekontrolle"?', a: 'Sicherstellen, dass Daten bei der Übermittlung nicht unbefugt gelesen oder verändert werden können (z.B. VPN, Verschlüsselung).' },
+    { id: '3.4_27', q: 'Was ist die "Verfügbarkeitskontrolle"?', a: 'Maßnahmen gegen Datenverlust oder Systemausfall, z.B. USV, RAID oder regelmäßige Backups.' },
+    { id: '3.4_28', q: 'Was beschreibt das Ziel der "Trennungskontrolle"?', a: 'Daten, die zu unterschiedlichen Zwecken erhoben wurden, müssen auch getrennt verarbeitet werden (z.B. getrennte Datenbanken).' },
+    { id: '3.4_29', q: 'Was ist die "Eingabekontrolle"?', a: 'Nachvollziehbarkeit, wer wann welche Daten in ein System eingegeben oder verändert hat (Protokollierung/Logging).' },
+    { id: '3.4_30', q: 'Müssen TOMs dem "Stand der Technik" entsprechen?', a: 'Ja, die Maßnahmen müssen regelmäßig überprüft und an aktuelle Sicherheitsstandards angepasst werden.' },
+
+    // --- Unterpunkt 4: AVV & Datenschutzbeauftragter (10 Karten) ---
+    { id: '3.4_31', q: 'Was ist ein AVV (Auftragsverarbeitungsvertrag)?', a: 'Ein Vertrag, der geschlossen werden muss, wenn ein Dienstleister (z.B. Cloud-Hoster) personenbezogene Daten im Auftrag eines Unternehmens verarbeitet.' },
+    { id: '3.4_32', q: 'Wer ist bei einer Auftragsverarbeitung für den Datenschutz verantwortlich?', a: 'Der Auftraggeber bleibt voll verantwortlich (Controller), der Dienstleister ist weisungsgebunden.' },
+    { id: '3.4_33', q: 'Wann muss ein Unternehmen einen Datenschutzbeauftragten (DSB) bestellen?', a: 'Wenn in der Regel mindestens 20 Personen ständig mit der automatisierten Verarbeitung personenbezogener Daten beschäftigt sind.' },
+    { id: '3.4_34', q: 'Darf der DSB einem fachlichen Vorgesetzten weisungsgebunden sein?', a: 'Nein, der DSB ist in seiner Fachkunde weisungsfrei und berichtet direkt an die Geschäftsleitung.' },
+    { id: '3.4_35', q: 'Was ist das "Verzeichnis von Verarbeitungstätigkeiten" (VVT)?', a: 'Eine interne Dokumentation aller Prozesse im Unternehmen, bei denen personenbezogene Daten verarbeitet werden.' },
+    { id: '3.4_36', q: 'Was ist eine Datenschutz-Folgenabschätzung (DSFA)?', a: 'Eine Risikoanalyse, die durchgeführt werden muss, wenn eine Datenverarbeitung ein voraussichtlich hohes Risiko für die Betroffenen hat.' },
+    { id: '3.4_37', q: 'Aufgabe des Datenschutzbeauftragten?', a: 'Beratung des Unternehmens, Überwachung der Einhaltung der DSGVO und Kontaktperson für Aufsichtsbehörden.' },
+    { id: '3.4_38', q: 'Gilt die DSGVO auch für Unternehmen außerhalb der EU?', a: 'Ja (Marktortprinzip), wenn sie Waren oder Dienstleistungen für Personen in der EU anbieten.' },
+    { id: '3.4_39', q: 'Was ist ein "gemeinsam Verantwortlicher" (Joint Controllership)?', a: 'Zwei oder mehr Unternehmen legen gemeinsam die Zwecke und Mittel der Datenverarbeitung fest.' },
+    { id: '3.4_40', q: 'Kann ein Mitarbeiter des IT-Supports gleichzeitig DSB sein?', a: 'Problematisch wegen Interessenkonflikten; der DSB darf sich nicht selbst kontrollieren.' },
+
+    // --- Unterpunkt 5: Urheberrecht & Lizenzen (10 Karten) ---
+    { id: '3.4_41', q: 'Was schützt das Urheberrecht bei Software?', a: 'Den Quellcode und die Struktur des Programms als persönliche geistige Schöpfung.' },
+    { id: '3.4_42', q: 'Was ist eine EULA?', a: 'End User License Agreement; die Endbenutzer-Lizenzvereinbarung zwischen Hersteller und Nutzer.' },
+    { id: '3.4_43', q: 'Was zeichnet die GPL (GNU General Public License) aus?', a: 'Eine Copyleft-Lizenz: Änderungen an der Software müssen unter derselben freien Lizenz veröffentlicht werden.' },
+    { id: '3.4_44', q: 'Was ist eine "permissive" Lizenz (z.B. MIT oder Apache)?', a: 'Erlaubt fast alles (Nutzung, Änderung, Verkauf), solange der ursprüngliche Urhebervermerk erhalten bleibt.' },
+    { id: '3.4_45', q: 'Unterschied zwischen Freeware und Open Source?', a: 'Freeware ist kostenlos nutzbar, Quellcode meist geheim. Open Source bietet Zugriff auf den Quellcode.' },
+    { id: '3.4_46', q: 'Was ist "Proprietäre Software"?', a: 'Software, deren Nutzung und Änderung durch den Hersteller stark eingeschränkt ist; Quellcode ist nicht öffentlich.' },
+    { id: '3.4_47', q: 'Darf man Software "gebraucht" weiterverkaufen?', a: 'Innerhalb der EU ja, sofern die Kopie unbrauchbar gemacht wurde (Erschöpfungsgrundsatz), auch bei Downloads.' },
+    { id: '3.4_48', q: 'Was bedeutet das "Vervielfältigungsrecht"?', a: 'Nur der Urheber darf Kopien des Werks erstellen oder anderen das Recht dazu einräumen.' },
+    { id: '3.4_49', q: 'Sind Algorithmen an sich urheberrechtlich geschützt?', a: 'Nein, mathematische Methoden und Ideen sind nicht schützbar, nur deren konkrete Umsetzung im Code.' },
+    { id: '3.4_50', q: 'Was ist eine "OEM-Lizenz"?', a: 'Eine Lizenz, die an bestimmte Hardware gebunden ist und meist günstiger verkauft wird.' }
+  ],
+
+  // Topic 4.1: Arbeits- & Tarifrecht (50 Karten)
+  '4.1': [
+    // --- Unterpunkt 1: Berufsausbildungsvertrag (10 Karten) ---
+    { id: '4.1_1', q: 'Wer sind die Vertragspartner eines Berufsausbildungsvertrages?', a: 'Der Ausbildende (Betrieb) und der Auszubildende (Lehrling).' },
+    { id: '4.1_2', q: 'Welche Form ist für den Ausbildungsvertrag zwingend vorgeschrieben?', a: 'Die Schriftform (muss vor Beginn der Ausbildung unterzeichnet sein).' },
+    { id: '4.1_3', q: 'Wie lange darf die Probezeit laut BBiG maximal dauern?', a: 'Maximal 4 Monate (Mindestdauer: 1 Monat).' },
+    { id: '4.1_4', q: 'Nenne drei Pflichten des Auszubildenden.', a: 'Lernpflicht, Sorgfaltspflicht, Gehorsamspflicht, Berufsschulpflicht, Berichtsheftführung.' },
+    { id: '4.1_5', q: 'Nenne drei Pflichten des Ausbildenden.', a: 'Ausbildungspflicht, Vergütungspflicht, Fürsorgepflicht, Freistellung für die Berufsschule, Zeugnispflicht.' },
+    { id: '4.1_6', q: 'Wie kann ein Ausbildungsvertrag während der Probezeit gekündigt werden?', a: 'Jederzeit, ohne Einhaltung einer Frist und ohne Angabe von Gründen.' },
+    { id: '4.1_7', q: 'Unter welchen Bedingungen kann nach der Probezeit gekündigt werden?', a: 'Durch den Azubi mit 4 Wochen Frist (bei Berufsaufgabe/-wechsel) oder durch beide aus wichtigem Grund (fristlos).' },
+    { id: '4.1_8', q: 'Was ist das "Verzeichnis der Berufsausbildungsverhältnisse"?', a: 'Ein Register bei der zuständigen Stelle (z.B. IHK), in das jeder Ausbildungsvertrag eingetragen werden muss.' },
+    { id: '4.1_9', q: 'Darf ein Azubi für Überstunden zur Kasse gebeten werden?', a: 'Nein, Überstunden sind grundsätzlich besonders zu vergüten oder durch Freizeit auszugleichen.' },
+    { id: '4.1_10', q: 'Was passiert mit dem Ausbildungsverhältnis bei Bestehen der Abschlussprüfung?', a: 'Es endet mit Bekanntgabe des Ergebnisses durch den Prüfungsausschuss, auch wenn der Vertrag ein späteres Datum vorsieht.' },
+
+    // --- Unterpunkt 2: Arbeitsrechtliche Gesetze (10 Karten) ---
+    { id: '4.1_11', q: 'Was regelt das Jugendarbeitsschutzgesetz (JArbSchG) bezüglich der Arbeitszeit?', a: 'Maximal 8 Stunden täglich und 40 Stunden wöchentlich (für Personen unter 18 Jahren).' },
+    { id: '4.1_12', q: 'Ab welcher Arbeitszeit ist laut ArbZG eine Pause von 30 Minuten Pflicht?', a: 'Bei einer Arbeitszeit von mehr als 6 bis zu 9 Stunden.' },
+    { id: '4.1_13', q: 'Was ist die gesetzliche Mindesturlaubsdauer laut Bundesurlaubsgesetz?', a: '24 Werktage bei einer 6-Tage-Woche (entspricht 20 Arbeitstagen bei einer 5-Tage-Woche).' },
+    { id: '4.1_14', q: 'Wann greift der allgemeine Kündigungsschutz nach dem KSchG?', a: 'Wenn der Betrieb mehr als 10 Mitarbeiter hat und das Arbeitsverhältnis länger als 6 Monate besteht.' },
+    { id: '4.1_15', q: 'Was regelt das Entgeltfortzahlungsgesetz im Krankheitsfall?', a: 'Der Arbeitgeber zahlt den Lohn für bis zu 6 Wochen zu 100% weiter.' },
+    { id: '4.1_16', q: 'Wie lange ist die gesetzliche Kündigungsfrist für Arbeitnehmer laut BGB?', a: '4 Wochen zum 15. oder zum Ende eines Kalendermonats.' },
+    { id: '4.1_17', q: 'Was besagt das Mutterschutzgesetz (MuSchG) zur Beschäftigung vor/nach der Geburt?', a: 'Beschäftigungsverbot 6 Wochen vor und in der Regel 8 Wochen nach der Entbindung.' },
+    { id: '4.1_18', q: 'Was ist das Ziel des Allgemeinen Gleichbehandlungsgesetzes (AGG)?', a: 'Verhinderung von Benachteiligungen aus Gründen der Rasse, Ethnie, Geschlecht, Religion, Behinderung, Alter oder sexueller Identität.' },
+    { id: '4.1_19', q: 'Was ist die Mindestruhezeit zwischen zwei Arbeitstagen laut ArbZG?', a: 'In der Regel 11 Stunden ununterbrochene Ruhezeit.' },
+    { id: '4.1_20', q: 'Gilt das JArbSchG auch für 17-jährige Auszubildende?', a: 'Ja, es gilt für alle Personen, die noch nicht 18 Jahre alt sind.' },
+
+    // --- Unterpunkt 3: Tarifrecht & Arbeitskampf (10 Karten) ---
+    { id: '4.1_21', q: 'Was bedeutet "Tarifautonomie"?', a: 'Das Recht von Gewerkschaften und Arbeitgeberverbänden, Arbeitsbedingungen (Lohn, Urlaub) ohne staatliche Einmischung auszuhandeln.' },
+    { id: '4.1_22', q: 'Was ist ein Manteltarifvertrag?', a: 'Regelt langfristige Arbeitsbedingungen wie Arbeitszeit, Urlaubstage oder Kündigungsfristen (nicht die Lohnhöhe).' },
+    { id: '4.1_23', q: 'Was ist ein Entgelttarifvertrag?', a: 'Regelt die Höhe der Vergütung und hat meist eine kurze Laufzeit (z.B. 1-2 Jahre).' },
+    { id: '4.1_24', q: 'Wann ist ein Arbeitnehmer an einen Tarifvertrag gebunden?', a: 'Wenn er Mitglied der Gewerkschaft ist UND der Arbeitgeber Mitglied im Arbeitgeberverband ist (oder bei Einzelvertragsklausel).' },
+    { id: '4.1_25', q: 'Was bedeutet "Friedenspflicht" während eines Tarifvertrages?', a: 'Solange der Vertrag läuft, dürfen keine Arbeitskämpfe (Streiks) zu den geregelten Inhalten geführt werden.' },
+    { id: '4.1_26', q: 'Was ist ein Streik?', a: 'Die gemeinsame, geplante Arbeitseinstellung durch Arbeitnehmer zur Durchsetzung von Tarifforderungen.' },
+    { id: '4.1_27', q: 'Was versteht man unter einer "Aussperrung"?', a: 'Die planmäßige Nichtzulassung von Arbeitnehmern zur Arbeit durch den Arbeitgeber unter Einstellung der Lohnzahlung (Gegenmaßnahme zum Streik).' },
+    { id: '4.1_28', q: 'Was ist eine Urabstimmung?', a: 'Geheime Wahl der Gewerkschaftsmitglieder darüber, ob ein Streik durchgeführt werden soll (meist 75% Zustimmung nötig).' },
+    { id: '4.1_29', q: 'Was ist ein Warnstreik?', a: 'Ein kurzer Streik während der laufenden Tarifverhandlungen, um die Streikbereitschaft zu demonstrieren (noch keine Urabstimmung nötig).' },
+    { id: '4.1_30', q: 'Was bedeutet die "Nachwirkung" eines Tarifvertrages?', a: 'Nach Ablauf gilt der Vertrag weiter, bis er durch eine neue Vereinbarung ersetzt wird.' },
+
+    // --- Unterpunkt 4: Betriebsverfassung & Mitbestimmung (10 Karten) ---
+    { id: '4.1_31', q: 'Ab wie vielen wahlberechtigten Mitarbeitern kann ein Betriebsrat gewählt werden?', a: 'Ab 5 ständigen wahlberechtigten Arbeitnehmern.' },
+    { id: '4.1_32', q: 'Nenne drei Aufgaben des Betriebsrats.', a: 'Überwachung der Gesetze/Tarifverträge, Entgegennahme von Anregungen, Förderung der Eingliederung (z.B. Ausländer, Behinderte).' },
+    { id: '4.1_33', q: 'In welchen Angelegenheiten hat der Betriebsrat ein echtes Mitbestimmungsrecht?', a: 'Soziale Angelegenheiten (z.B. Überstundenregelung, Urlaubsplan, Rauchverbote, Kantine).' },
+    { id: '4.1_34', q: 'Was ist der Unterschied zwischen Mitbestimmung und Mitwirkung?', a: 'Mitbestimmung: Arbeitgeber braucht Zustimmung. Mitwirkung: Arbeitgeber muss nur informieren oder anhören.' },
+    { id: '4.1_35', q: 'Muss der Betriebsrat vor jeder Kündigung angehört werden?', a: 'Ja, eine Kündigung ohne vorherige Anhörung des Betriebsrats ist unwirksam.' },
+    { id: '4.1_36', q: 'Was ist eine Betriebsvereinbarung?', a: 'Ein Vertrag zwischen Arbeitgeber und Betriebsrat über Arbeitsbedingungen im konkreten Betrieb.' },
+    { id: '4.1_37', q: 'Wer wählt die Jugend- und Auszubildendenvertretung (JAV)?', a: 'Alle Arbeitnehmer unter 18 Jahren sowie Azubis unter 25 Jahren.' },
+    { id: '4.1_38', q: 'Was ist das Ziel der Montan-Mitbestimmung?', a: 'Paritätische Besetzung des Aufsichtsrats (50% Anteilseigner, 50% Arbeitnehmer) in der Kohle- und Stahlindustrie.' },
+    { id: '4.1_39', q: 'Darf der Betriebsrat zum Streik aufrufen?', a: 'Nein, der Betriebsrat muss parteipolitisch und gewerkschaftlich neutral agieren; Streiks sind Sache der Gewerkschaften.' },
+    { id: '4.1_40', q: 'Was regelt das Drittelbeteiligungsgesetz?', a: 'Ein Drittel des Aufsichtsrats muss aus Arbeitnehmervertretern bestehen (in Kapitalgesellschaften mit 500 bis 2000 Mitarbeitern).' },
+
+    // --- Unterpunkt 5: Sozialversicherungen (10 Karten) ---
+    { id: '4.1_41', q: 'Nenne die 5 Säulen der gesetzlichen Sozialversicherung in Deutschland.', a: 'Renten-, Kranken-, Arbeitslosen-, Pflege- und Unfallversicherung.' },
+    { id: '4.1_42', q: 'Wer ist der Träger der gesetzlichen Rentenversicherung?', a: 'Die Deutsche Rentenversicherung (DRV).' },
+    { id: '4.1_43', q: 'Wer zahlt die Beiträge zur gesetzlichen Unfallversicherung?', a: 'Der Arbeitgeber allein (100%).' },
+    { id: '4.1_44', q: 'Welche Versicherung leistet bei Berufskrankheiten oder Arbeitsunfällen?', a: 'Die gesetzliche Unfallversicherung (Berufsgenossenschaften).' },
+    { id: '4.1_45', q: 'Was ist das Solidaritätsprinzip in der Sozialversicherung?', a: 'Jeder zahlt nach seiner Leistungsfähigkeit (Einkommen), erhält aber Leistungen nach seinem Bedarf.' },
+    { id: '4.1_46', q: 'Was ist die Beitragsbemessungsgrenze?', a: 'Der maximale Bruttolohn, bis zu dem Sozialversicherungsbeiträge berechnet werden. Der Teil darüber ist beitragsfrei.' },
+    { id: '4.1_47', q: 'Wer ist der Träger der gesetzlichen Arbeitslosenversicherung?', a: 'Die Bundesagentur für Arbeit (BA).' },
+    { id: '4.1_48', q: 'Was bedeutet "Paritätische Finanzierung"?', a: 'Arbeitgeber und Arbeitnehmer teilen sich die Beiträge zur Versicherung jeweils zur Hälfte (50/50).' },
+    { id: '4.1_49', q: 'Welche Versicherung zahlt das "Pflegegeld"?', a: 'Die gesetzliche Pflegeversicherung.' },
+    { id: '4.1_50', q: 'Was ist das Äquivalenzprinzip (vor allem in der Rentenversicherung)?', a: 'Die Höhe der Leistungen (Rente) hängt von der Höhe und Dauer der eingezahlten Beiträge ab.' }
   ]
 };
