@@ -136,7 +136,7 @@ window.ANKI_QUESTIONS = {
 
   // Topic 1.3: UML-Modellierung (10 Karten)
   '1.3': [
-    { id: '1.3_1', q: 'Was ist der Unterschied zwischen Aggregation und Komposition im Klassendiagramm?', a: 'Aggregation (leere Raute): Das Teil kann unabhängig vom Ganzen existieren. Komposition (gefüllte Raute): Das Teil existiert nicht ohne das Ganze (Existenzabhängigkeit).' },
+    { id: '1.3_1', q: 'Was ist the difference between Aggregation and Komposition in UML?', a: 'Aggregation (leere Raute): Das Teil kann unabhängig vom Ganzen existieren. Komposition (gefüllte Raute): Das Teil existiert nicht ohne das Ganze.' },
     { id: '1.3_2', q: 'Wofür steht die Abkürzung UML?', a: 'Unified Modeling Language.' },
     { id: '1.3_3', q: 'Nenne die drei Hauptkategorien von UML-Diagrammen.', a: 'Strukturdiagramme, Verhaltensdiagramme, Interaktionsdiagramme.' },
     { id: '1.3_4', q: 'Was zeigt ein Klassendiagramm?', a: 'Die statische Struktur eines Systems: Klassen, Attribute, Methoden und deren Beziehungen.' },
@@ -146,5 +146,569 @@ window.ANKI_QUESTIONS = {
     { id: '1.3_8', q: 'Was ist eine Generalisierung in UML?', a: 'Eine "Ist-ein"-Beziehung (Vererbung). Eine spezialisierte Klasse übernimmt Merkmale einer allgemeinen Klasse.' },
     { id: '1.3_9', q: 'Was bedeutet die Multiplizität 1..*?', a: 'Mindestens eins, nach oben offen (beliebig viele).' },
     { id: '1.3_10', q: 'Was stellt ein Aktivitätsdiagramm dar?', a: 'Den logischen Ablauf eines Prozesses oder Algorithmus (ähnlich einem Flussdiagramm).' }
+  ],
+
+  // Topic 1.4: Software-Architektur & Schnittstellen (50 Karten)
+  '1.4': [
+    // --- Unterpunkt 1: Schichtenarchitektur & Microservices (10 Karten) ---
+    { id: '1.4_1', q: 'Was ist das Hauptziel der 3-Schichten-Architektur?', a: 'Trennung von Zuständigkeiten (Separation of Concerns) in Präsentation, Logik und Daten.' },
+    { id: '1.4_2', q: 'Nenne die drei Schichten der 3-Tier-Architektur.', a: '1. Präsentationsschicht (UI), 2. Logikschicht (Business Logic), 3. Datenschicht (Persistence).' },
+    { id: '1.4_3', q: 'Warum ist lose Kopplung zwischen Schichten wichtig?', a: 'Ermöglicht den Austausch oder die Änderung einzelner Schichten, ohne das Gesamtsystem zu gefährden.' },
+    { id: '1.4_4', q: 'Was unterscheidet eine n-Tier von einer 3-Tier Architektur?', a: 'Zusätzliche Ebenen wie Caching, Security-Proxys oder separate Service-Layer.' },
+    { id: '1.4_5', q: 'Was charakterisiert einen Software-Monolithen?', a: 'Alle Funktionen befinden sich in einer einzigen, zusammenhängenden Codebasis und Deployment-Einheit.' },
+    { id: '1.4_6', q: 'Was ist ein Microservice?', a: 'Ein kleiner, eigenständiger Dienst, der genau eine fachliche Geschäftsfunktion erfüllt.' },
+    { id: '1.4_7', q: 'Was ist der Vorteil von Microservices bei Lastspitzen?', a: 'Es muss nur der betroffene Dienst mehrfach instanziiert (skaliert) werden, nicht die ganze Anwendung.' },
+    { id: '1.4_8', q: 'Was bedeutet "Shared Nothing" bei Microservices?', a: 'Jeder Dienst besitzt seine eigene Datenbank; die Datenhoheit liegt allein beim jeweiligen Service.' },
+    { id: '1.4_9', q: 'Wie kommunizieren Microservices primär?', a: 'Über leichtgewichtige Protokolle wie REST (HTTP) oder Message Broker (asynchron).' },
+    { id: '1.4_10', q: 'Nenne eine große Herausforderung bei Microservices.', a: 'Hohe Komplexität bei Deployment, Monitoring und netzwerkbedingte Latenzen.' },
+
+    // --- Unterpunkt 2: REST APIs (10 Karten) ---
+    { id: '1.4_11', q: 'Wofür steht die Abkürzung REST?', a: 'Representational State Transfer.' },
+    { id: '1.4_12', q: 'Was bedeutet Statelessness (Zustandslosigkeit) bei REST?', a: 'Der Server speichert keine Client-Sitzung. Jede Anfrage muss alle für die Verarbeitung nötigen Infos enthalten.' },
+    { id: '1.4_13', q: 'Zweck der HTTP-Methode GET?', a: 'Sicheres Abrufen einer Ressource vom Server (darf keine Daten verändern).' },
+    { id: '1.4_14', q: 'Zweck der HTTP-Methode POST?', a: 'Erstellen einer neuen Ressource auf dem Server.' },
+    { id: '1.4_15', q: 'Zweck der HTTP-Methode PUT?', a: 'Vollständiges Ersetzen einer Ressource oder Neuanlage unter einer bekannten URL.' },
+    { id: '1.4_16', q: 'Unterschied zwischen PUT und PATCH?', a: 'PUT ersetzt die gesamte Ressource, PATCH aktualisiert sie nur teilweise (Partial Update).' },
+    { id: '1.4_17', q: 'Was bedeutet der HTTP-Statuscode 201?', a: 'Created (Erfolgreich erstellt).' },
+    { id: '1.4_18', q: 'Was bedeutet der HTTP-Statuscode 401?', a: 'Unauthorized (Authentifizierung fehlt oder ist ungültig).' },
+    { id: '1.4_19', q: 'Was bedeutet der HTTP-Statuscode 403?', a: 'Forbidden (Authentifiziert, aber keine Berechtigung für diese Ressource).' },
+    { id: '1.4_20', q: 'Was bedeutet Idempotenz bei REST-Methoden?', a: 'Mehrfache identische Aufrufe führen zum selben Ergebnis wie ein einzelner Aufruf (z.B. GET, PUT, DELETE).' },
+
+    // --- Unterpunkt 3: Datenaustauschformate (10 Karten) ---
+    { id: '1.4_21', q: 'Was ist das Hauptmerkmal von JSON?', a: 'Textbasiert, leichtgewichtig, nutzt Schlüssel-Wert-Paare, nativ kompatibel mit JavaScript.' },
+    { id: '1.4_22', q: 'Was ist der Kernunterschied von XML zu JSON?', a: 'Nutzt hierarchische Tags (<tag>), ist erweiterbar (XSD) und unterstützt komplexe Dokumentstrukturen.' },
+    { id: '1.4_23', q: 'Wofür nutzt man XML Schema Definition (XSD)?', a: 'Zur strengen Validierung von Struktur, Inhalten und Datentypen in einem XML-Dokument.' },
+    { id: '1.4_24', q: 'Zweck von Namespaces in XML?', a: 'Vermeidung von Namenskonflikten bei Elementen, wenn verschiedene XML-Vokabulare gemischt werden.' },
+    { id: '1.4_25', q: 'Was ist SOAP?', a: 'Ein XML-basiertes Protokoll für Webservices mit striktem Standard (Envelope, Header, Body).' },
+    { id: '1.4_26', q: 'Bedeutung der WSDL bei SOAP-Services?', a: 'Web Services Description Language; beschreibt die technische Schnittstelle (Methoden, Typen).' },
+    { id: '1.4_27', q: 'Vorteil von JSON gegenüber XML für Web-APIs?', a: 'Geringerer Overhead (Datenmenge) und schnellere Verarbeitung im Browser/Frontend.' },
+    { id: '1.4_28', q: 'Wann ist XML besser geeignet als JSON?', a: 'Bei sehr komplexen Dokumentenstrukturen, die eine exakte Datentyp-Validierung erfordern.' },
+    { id: '1.4_29', q: 'Was bedeutet "Parsen" in Bezug auf Datenaustausch?', a: 'Das Umwandeln eines Datenstroms (z.B. JSON-String) in ein verarbeitbares Objekt im Arbeitsspeicher.' },
+    { id: '1.4_30', q: 'Was versteht man unter "Marshalling"?', a: 'Der Vorgang, ein Objekt aus dem Speicher in ein Austauschformat (z.B. XML oder JSON) zu serialisieren.' },
+
+    // --- Unterpunkt 4: Webservices & Dokumentation (10 Karten) ---
+    { id: '1.4_31', q: 'Was ist ein Webservice?', a: 'Eine über ein Netzwerk bereitgestellte Dienstleistung, die über standardisierte Protokolle (HTTP) kommuniziert.' },
+    { id: '1.4_32', q: 'Was beschreibt der OpenAPI-Standard?', a: 'Ein Format zur maschinenlesbaren Beschreibung und Dokumentation von REST-Schnittstellen.' },
+    { id: '1.4_33', q: 'Was ist Swagger im Kontext von APIs?', a: 'Ein Toolset (UI, Editor), das den OpenAPI-Standard visualisiert und Schnittstellen testbar macht.' },
+    { id: '1.4_34', q: 'Was ist ein API-Endpoint?', a: 'Die spezifische URL (URI), unter der eine bestimmte Ressource oder Funktion angesprochen wird.' },
+    { id: '1.4_35', q: 'Warum ist Versionierung (z.B. /v1/) bei APIs wichtig?', a: 'Um Abwärtskompatibilität zu gewährleisten, wenn sich die Schnittstelle für neue Features ändert.' },
+    { id: '1.4_36', q: 'Was ist das Grundkonzept von HATEOAS?', a: 'Die API-Antwort enthält Links zu weiteren möglichen Aktionen, sodass der Client die API explorativ nutzen kann.' },
+    { id: '1.4_37', q: 'Was ist der Payload einer HTTP-Nachricht?', a: 'Die eigentlichen Nutzdaten (z.B. ein User-Objekt), die im Rumpf (Body) übertragen werden.' },
+    { id: '1.4_38', q: 'Aufgabe eines API-Gateways?', a: 'Zentrale Instanz für Routing, Authentifizierung, Caching und Lastverteilung vor den eigentlichen Diensten.' },
+    { id: '1.4_39', q: 'Zweck von Rate Limiting?', a: 'Schutz der API vor Überlastung (DoS) und Steuerung der Kontingente pro Nutzer/Client.' },
+    { id: '1.4_40', q: 'Was bedeutet CORS (Cross-Origin Resource Sharing)?', a: 'Ein Sicherheitsmechanismus, der regelt, welche Web-Ursprünge auf Ressourcen einer anderen Domain zugreifen dürfen.' },
+
+    // --- Unterpunkt 5: Messaging & Event-Driven (10 Karten) ---
+    { id: '1.4_41', q: 'Hauptvorteil von asynchronem Messaging gegenüber REST?', a: 'Sender muss nicht auf Antwort warten; erhöhte Resilienz (Nachrichten werden gepuffert).' },
+    { id: '1.4_42', q: 'Nenne ein bekanntes Tool für Message Broking.', a: 'RabbitMQ, Apache Kafka oder ActiveMQ.' },
+    { id: '1.4_43', q: 'Was ist eine Message Queue?', a: 'Ein Puffer, der Nachrichten nach dem FIFO-Prinzip speichert, bis ein Empfänger sie abarbeiten kann.' },
+    { id: '1.4_44', q: 'Erkläre das Pub/Sub-Prinzip (Publisher/Subscriber).', a: 'Ein Sender schickt an ein Topic; alle angemeldeten Empfänger erhalten die Nachricht gleichzeitig.' },
+    { id: '1.4_45', q: 'Wie fördert Messaging die lose Kopplung?', a: 'Sender und Empfänger kennen sich nicht direkt und müssen nicht gleichzeitig erreichbar sein.' },
+    { id: '1.4_46', q: 'Was ist ein Event im Kontext von Software-Architektur?', a: 'Eine relevante Zustandsänderung (z.B. "Zahlung erfolgt"), die asynchron an andere Systemteile gemeldet wird.' },
+    { id: '1.4_47', q: 'Aufgabe des Message Consumers?', a: 'Das aktive Abrufen (Polling) oder Empfangen und Verarbeiten von Nachrichten aus dem Broker.' },
+    { id: '1.4_48', q: 'Wie hilft Messaging bei Lastspitzen?', a: 'Nachrichten stauen sich in der Queue, statt den Dienst zu überlasten (Load Leveling).' },
+    { id: '1.4_49', q: 'Was bedeutet Persistenz bei Message Brokern?', a: 'Das Speichern von Nachrichten auf der Festplatte, damit sie bei einem Systemausfall nicht verloren gehen.' },
+    { id: '1.4_50', q: 'Unterschied Topic vs. Queue?', a: 'Queue: Nur ein Consumer erhält die Nachricht. Topic: Mehrere Subscriber können die gleiche Nachricht erhalten.' }
+  ],
+
+  // Topic 1.5: UI/UX & Ergonomie (40 Karten)
+  '1.5': [
+    // --- Unterpunkt 1: Softwareergonomie & UX (10 Karten) ---
+    { id: '1.5_1', q: 'Nenne drei Grundsätze der Dialoggestaltung nach DIN EN ISO 9241-110.', a: 'Aufgabenangemessenheit, Selbstbeschreibungsfähigkeit, Steuerbarkeit, Erwartungskonformität, Fehlertoleranz.' },
+    { id: '1.5_2', q: 'Was ist der Unterschied zwischen Usability und User Experience (UX)?', a: 'Usability: Wie effizient und zufriedenstellend ein Ziel erreicht wird. UX: Das gesamte Erlebnis vor, während und nach der Nutzung (inkl. Emotionen).' },
+    { id: '1.5_3', q: 'Was beschreibt der Grundsatz "Aufgabenangemessenheit"?', a: 'Die Software unterstützt den Nutzer so, dass er seine Aufgaben effektiv und effizient erledigen kann.' },
+    { id: '1.5_4', q: 'Was bedeutet "Selbstbeschreibungsfähigkeit" in der UI?', a: 'Der Nutzer erkennt jederzeit, wo er sich befindet und welche Schritte als Nächstes möglich sind (z.B. durch Tooltips oder Breadcrumbs).' },
+    { id: '1.5_5', q: 'Was ist das Ziel der "Erwartungskonformität"?', a: 'Die Software verhält sich konsistent und entspricht den Konventionen, die der Nutzer aus anderen Programmen kennt.' },
+    { id: '1.5_6', q: 'Definition von "Fehlertoleranz" nach ISO 9241?', a: 'Das System ermöglicht es dem Nutzer, Fehler mit geringem Aufwand zu korrigieren (z.B. durch Undo-Funktionen oder klare Fehlermeldungen).' },
+    { id: '1.5_7', q: 'Was versteht man unter "Individualisierbarkeit" einer Software?', a: 'Der Nutzer kann die Oberfläche oder Interaktion an seine persönlichen Bedürfnisse anpassen (z.B. Dark Mode, Schriftgröße).' },
+    { id: '1.5_8', q: 'Was ist "Lernförderlichkeit" in Bezug auf UI?', a: 'Die Software sollte so gestaltet sein, dass der Nutzer den Umgang mit ihr schnell und ohne großen Schulungsaufwand erlernt.' },
+    { id: '1.5_9', q: 'Was beschreibt die "Steuerbarkeit"?', a: 'Der Nutzer kann den Dialogfluss selbst bestimmen und das Tempo der Interaktion beeinflussen.' },
+    { id: '1.5_10', q: 'Was ist ein "User-Centered Design" (UCD) Prozess?', a: 'Ein iterativer Gestaltungsprozess, bei dem die Bedürfnisse, Wünsche und Einschränkungen der Endnutzer in jeder Phase im Mittelpunkt stehen.' },
+
+    // --- Unterpunkt 2: Barrierefreiheit (10 Karten) ---
+    { id: '1.5_11', q: 'Wofür steht das Akronym POUR bei den WCAG-Prinzipien?', a: 'Perceivable (Wahrnehmbar), Operable (Bedienbar), Understandable (Verständlich), Robust.' },
+    { id: '1.5_12', q: 'Was bedeutet "Wahrnehmbarkeit" (Perceivable) konkret?', a: 'Informationen müssen so präsentiert werden, dass sie von den Sinnen erfasst werden können (z.B. Alt-Texte für Bilder).' },
+    { id: '1.5_13', q: 'Was fordert das Prinzip "Bedienbarkeit" (Operable)?', a: 'Die Benutzeroberfläche muss vollständig über verschiedene Eingabemethoden (z.B. nur Tastatur) steuerbar sein.' },
+    { id: '1.5_14', q: 'Was bedeutet "Verständlichkeit" (Understandable) bei Webseiten?', a: 'Texte müssen lesbar und verständlich sein; die Bedienung muss vorhersehbar funktionieren.' },
+    { id: '1.5_15', q: 'Was beschreibt das Prinzip "Robustheit"?', a: 'Inhalte müssen stabil genug sein, um von einer Vielzahl von Readern und Hilfstechnologien (Assistive Technology) interpretiert zu werden.' },
+    { id: '1.5_16', q: 'Was ist die BITV 2.0?', a: 'Die Barrierefreie-Informationstechnik-Verordnung; sie regelt die Anforderungen für öffentliche Stellen in Deutschland.' },
+    { id: '1.5_17', q: 'Warum sind Kontrastverhältnisse für Barrierefreiheit wichtig?', a: 'Damit Texte auch für Menschen mit Sehschwäche oder bei direkter Sonneneinstrahlung gut lesbar bleiben (Standard: 4.5:1 für Fließtext).' },
+    { id: '1.5_18', q: 'Welchen Zweck haben "WAI-ARIA" Attribute?', a: 'Sie liefern zusätzliche semantische Informationen für Screenreader, um komplexe Widgets (z.B. Modale) barrierefrei zu machen.' },
+    { id: '1.5_19', q: 'Was ist "Leichte Sprache"?', a: 'Ein speziell geregeltes Sprachkonzept mit kurzem Satzbau und einfachen Wörtern für Menschen mit Lernschwierigkeiten.' },
+    { id: '1.5_20', q: 'Wie hilft eine korrekte HTML-Überschriftenstruktur (H1-H6) der Barrierefreiheit?', a: 'Sie ermöglicht es Screenreader-Nutzern, schnell durch die Seite zu navigieren und die Hierarchie zu verstehen.' },
+
+    // --- Unterpunkt 3: Design-Prozess (10 Karten) ---
+    { id: '1.5_21', q: 'Was ist ein Wireframe?', a: 'Ein statisches, meist farbloses Skelett einer UI, das nur die Struktur und Platzierung von Elementen zeigt.' },
+    { id: '1.5_22', q: 'Unterschied Mockup vs. Prototyp?', a: 'Mockup: Statisches High-Fidelity Designbild. Prototyp: Interaktives Modell, das die Bedienung simuliert.' },
+    { id: '1.5_23', q: 'Was bedeutet "Low-Fidelity" (Lo-Fi) beim Prototyping?', a: 'Einfache Skizzen (z.B. Papierprototypen), um Konzepte schnell und günstig zu testen.' },
+    { id: '1.5_24', q: 'Vorteil von High-Fidelity (Hi-Fi) Prototypen?', a: 'Sie wirken fast wie das fertige Produkt und eignen sich ideal für realistische Nutzertests.' },
+    { id: '1.5_25', q: 'Was versteht man unter einem "A/B-Test"?', a: 'Der Vergleich von zwei Versionen einer UI (A und B), um herauszufinden, welche bei den Nutzern besser performt.' },
+    { id: '1.5_26', q: 'Was ist ein "Clickdummy"?', a: 'Ein interaktiver Prototyp ohne echte Logik/Datenbank im Hintergrund, der nur Verlinkungen zwischen Screens simuliert.' },
+    { id: '1.5_27', q: 'Warum startet man oft mit "Mobile First"?', a: 'Um sich auf die wichtigsten Inhalte zu fokussieren und später für große Bildschirme zu erweitern (Progressive Enhancement).' },
+    { id: '1.5_28', q: 'Was beschreibt die "Informationsarchitektur"?', a: 'Die Strukturierung und Organisation von Inhalten, um die Auffindbarkeit von Informationen zu optimieren.' },
+    { id: '1.5_29', q: 'Was ist ein Design System?', a: 'Eine Sammlung von wiederverwendbaren Komponenten und Regeln, die eine konsistente UI über das gesamte Produkt sicherstellen.' },
+    { id: '1.5_30', q: 'Was ist das Ziel eines "Card Sorting"?', a: 'Eine Methode, um herauszufinden, wie Nutzer Informationen gruppieren würden (hilft bei der Menüstruktur).' },
+
+    // --- Unterpunkt 4: Farblehre, Typografie & Gestaltgesetze (10 Karten) ---
+    { id: '1.5_31', q: 'Was besagt das Gestaltgesetz der Nähe?', a: 'Elemente, die räumlich eng beieinander liegen, werden als zusammengehörig wahrgenommen.' },
+    { id: '1.5_32', q: 'Was besagt das Gestaltgesetz der Ähnlichkeit?', a: 'Gleich aussehende Elemente (Form, Farbe) werden als funktionale Einheit interpretiert.' },
+    { id: '1.5_33', q: 'Was ist das "Gesetz der Geschlossenheit"?', a: 'Das Gehirn vervollständigt unvollständige Formen zu einem ganzen Bild.' },
+    { id: '1.5_34', q: 'Erkläre den "Prägnanz"-Effekt (Gesetz der guten Gestalt).', a: 'Der Mensch bevorzugt einfache, symmetrische und regelmäßige Strukturen.' },
+    { id: '1.5_35', q: 'Was sind Komplementärfarben?', a: 'Farben, die sich im Farbkreis gegenüberliegen (hoher Kontrast, z.B. Blau und Orange).' },
+    { id: '1.5_36', q: 'Unterschied Serif vs. Sans-Serif Schriften?', a: 'Serif: Mit kleinen "Füßchen" (gut für Druck). Sans-Serif: Ohne Füßchen (modern, gut lesbar auf Bildschirmen).' },
+    { id: '1.5_37', q: 'Was bedeutet "Zeilenabstand" (Leading) für die Lesbarkeit?', a: 'Ein angemessener Abstand verhindert, dass Zeilen optisch verschwimmen (ideal ca. 140-160%).' },
+    { id: '1.5_38', q: 'Was beschreibt die "Farpsychologie"?', a: 'Die Wirkung von Farben auf Gefühle (z.B. Blau = Vertrauen/Ruhe, Rot = Gefahr/Aktion).' },
+    { id: '1.5_39', q: 'Was ist der "Goldene Schnitt" im Design?', a: 'Ein mathematisches Proportionsverhältnis (ca. 1,61), das vom Menschen als besonders harmonisch empfunden wird.' },
+    { id: '1.5_40', q: 'Was ist "Whitespace" (Negativraum)?', a: 'Leere Flächen zwischen UI-Elementen; sie helfen, Inhalte zu strukturieren und den Fokus zu lenken.' }
+  ],
+
+  // Topic 2.1: Algorithmen & Programmierung (70 Karten)
+  '2.1': [
+    // --- Unterpunkt 1: Pseudocode & Struktogramme (10 Karten) ---
+    { id: '2.1_1', q: 'Was ist das Hauptziel von Pseudocode?', a: 'Logik unabhängig von einer konkreten Programmiersprache verständlich darzustellen.' },
+    { id: '2.1_2', q: 'Wie wird eine "Alternative" (If-Else) im Struktogramm dargestellt?', a: 'Durch ein Rechteck, das durch ein "V" in zwei oder drei Teilbereiche (Bedingung, Ja-Zweig, Nein-Zweig) getrennt ist.' },
+    { id: '2.1_3', q: 'Wofür steht die Abkürzung "DIN 66261" im Kontext der Programmierung?', a: 'Es ist die Norm für Sinnbilder von Struktogrammen (Nassi-Shneiderman-Diagramme).' },
+    { id: '2.1_4', q: 'Wie erkennt man eine kopfgesteuerte Schleife im Struktogramm?', a: 'Die Bedingung steht oben, der Schleifenkörper ist darunter eingerückt dargestellt.' },
+    { id: '2.1_5', q: 'Wie erkennt man eine fußgesteuerte Schleife im Struktogramm?', a: 'Die Bedingung steht unten, nach dem Schleifenkörper.' },
+    { id: '2.1_6', q: 'Was ist ein "Case" oder eine "Mehrfachauswahl" im Struktogramm?', a: 'Eine Verzweigung, die mehr als zwei Wege (Fälle) basierend auf einem Wert ermöglicht.' },
+    { id: '2.1_7', q: 'Welches Symbol stellt eine einfache Anweisung (Sequenz) im Struktogramm dar?', a: 'Ein einfaches Rechteck.' },
+    { id: '2.1_8', q: 'Warum sind Struktogramme besser als Flussdiagramme (Flowcharts)?', a: 'Sie erzwingen eine strukturierte Programmierung (kein GOTO möglich) und sind kompakter.' },
+    { id: '2.1_9', q: 'Was bedeutet "Einrücken" im Pseudocode?', a: 'Es kennzeichnet die Zugehörigkeit von Codeblöcken zu Schleifen oder Bedingungen.' },
+    { id: '2.1_10', q: 'Darf Pseudocode mathematische Symbole verwenden?', a: 'Ja, Pseudocode ist informell und darf Mathematik, natürliche Sprache und Logik mischen.' },
+
+    // --- Unterpunkt 2: Aktivitätsdiagramm (10 Karten) ---
+    { id: '2.1_11', q: 'Was ist ein "Startknoten" im Aktivitätsdiagramm?', a: 'Ein ausgefüllter schwarzer Kreis, der den Beginn des Ablaufs markiert.' },
+    { id: '2.1_12', q: 'Unterschied zwischen Fork (Gabelung) und Join (Vereinigung)?', a: 'Fork: Teilt einen Kontrollfluss in mehrere parallele Zweige. Join: Führt parallele Zweige wieder zusammen.' },
+    { id: '2.1_13', q: 'Wie wird eine Entscheidung (Decision) im Aktivitätsdiagramm dargestellt?', a: 'Durch eine Raute mit einem eingehenden und mehreren ausgehenden Pfeilen (mit Guards in eckigen Klammern).' },
+    { id: '2.1_14', q: 'Was ist ein "Merge-Knoten" im Aktivitätsdiagramm?', a: 'Ebenfalls eine Raute, führt aber alternative (nicht parallele!) Pfade wieder zusammen.' },
+    { id: '2.1_15', q: 'Wie stellt man den Empfang eines externen Signals dar?', a: 'Durch ein Symbol, das wie ein Rechteck mit einer eingekerbten Seite (konkav) aussieht.' },
+    { id: '2.1_16', q: 'Wie stellt man das Senden eines Signals dar?', a: 'Durch ein Symbol, das wie ein Rechteck mit einer spitzen Seite (konvex/pfeilförmig) aussieht.' },
+    { id: '2.1_17', q: 'Was bedeutet "Parallelität" im Aktivitätsdiagramm?', a: 'Aktionen, die zeitgleich oder in beliebiger Reihenfolge ausgeführt werden können (zwischen Fork und Join).' },
+    { id: '2.1_18', q: 'Was markiert der "Endknoten" (Activity Final)?', a: 'Ein Kreis mit einem ausgefüllten Punkt darin ("Stierauge"); beendet die gesamte Aktivität.' },
+    { id: '2.1_19', q: 'Was markiert ein "Ablaufendknoten" (Flow Final)?', a: 'Ein Kreis mit einem "X" darin; beendet nur einen Pfad, nicht die ganze Aktivität.' },
+    { id: '2.1_20', q: 'Was sind "Swimlanes" (Verantwortlichkeitsbereiche)?', a: 'Spalten oder Zeilen, die zeigen, wer (z.B. System, User, Datenbank) eine Aktion ausführt.' },
+
+    // --- Unterpunkt 3: Schreibtischtests (10 Karten) ---
+    { id: '2.1_21', q: 'Was ist der Zweck eines Schreibtischtests?', a: 'Die manuelle Überprüfung eines Algorithmus auf Logikfehler ohne Computer.' },
+    { id: '2.1_22', q: 'Was ist eine "Tracetabelle"?', a: 'Eine Tabelle, in der die Werte aller Variablen Zeile für Zeile während des Algorithmus-Durchlaufs notiert werden.' },
+    { id: '2.1_23', q: 'Was bedeutet "Trockenlauf" (Dry Run)?', a: 'Ein Synonym für Schreibtischtest; das schrittweise Durchspielen des Codes im Kopf oder auf Papier.' },
+    { id: '2.1_24', q: 'Warum testet man oft Grenzwerte (z.B. 0, -1, Max-Int)?', a: 'Weil hier die meisten Logikfehler auftreten (z.B. Off-by-one-Errors).' },
+    { id: '2.1_25', q: 'Was muss in der ersten Zeile einer Tracetabelle stehen?', a: 'Die Ausgangswerte (Initialzustand) der Variablen vor dem ersten Schritt.' },
+    { id: '2.1_26', q: 'Was ist ein "Off-by-one-Error"?', a: 'Ein Fehler, bei dem eine Schleife genau einmal zu oft oder zu wenig durchläuft.' },
+    { id: '2.1_27', q: 'Was prüft man bei Schreibtischtests von Bedingungen?', a: 'Ob der Algorithmus für True UND False das erwartete Ergebnis liefert.' },
+    { id: '2.1_28', q: 'Wie geht man bei verschachtelten Schleifen in der Tracetabelle vor?', a: 'Man führt für jede Änderung der inneren Schleife eine neue Zeile (oder Spalte) ein.' },
+    { id: '2.1_29', q: 'Können Schreibtischtests Endlosschleifen finden?', a: 'Ja, wenn man feststellt, dass die Abbruchbedingung niemals erreicht werden kann.' },
+    { id: '2.1_30', q: 'Was ist ein "Input-Output-Check" beim Schreibtischtest?', a: 'Vergleich des manuell ermittelten Endergebnisses mit dem fachlich erwarteten Soll-Wert.' },
+
+    // --- Unterpunkt 4: Rekursion vs. Iteration (10 Karten) ---
+    { id: '2.1_31', q: 'Definition von Rekursion?', a: 'Eine Funktion, die sich selbst aufruft, um ein Problem in kleinere Teilprobleme zu zerlegen.' },
+    { id: '2.1_32', q: 'Was ist die wichtigste Bedingung für eine Rekursion?', a: 'Die Abbruchbedingung (Basisfall), damit keine Endlosschleife entsteht.' },
+    { id: '2.1_33', q: 'Definition von Iteration?', a: 'Wiederholtes Ausführen von Anweisungen mittels Schleifen (For, While).' },
+    { id: '2.1_34', q: 'Nenne ein Problem der Rekursion.', a: 'Hoher Speicherverbrauch auf dem Stack (Gefahr des StackOverflow).' },
+    { id: '2.1_35', q: 'Vorteil der Rekursion?', a: 'Oft eleganterer, kürzerer Code bei natürlich rekursiven Problemen (z.B. Bäume durchlaufen).' },
+    { id: '2.1_36', q: 'Was passiert technisch bei jedem rekursiven Aufruf?', a: 'Ein neuer Frame (Kontext) wird auf dem Call-Stack abgelegt.' },
+    { id: '2.1_37', q: 'Kann jede Rekursion in eine Iteration umgewandelt werden?', a: 'Ja, theoretisch ist das immer möglich (manchmal mit eigenem Stack-Management).' },
+    { id: '2.1_38', q: 'Was ist "Endrekursion" (Tail Recursion)?', a: 'Eine Rekursion, bei der der Selbstaufruf die absolut letzte Aktion der Funktion ist (optimierbar durch Compiler).' },
+    { id: '2.1_39', q: 'Nenne ein typisches Beispiel für Rekursion.', a: 'Fakultätsberechnung, Fibonacci-Zahlen, Verzeichnisstrukturen lesen.' },
+    { id: '2.1_40', q: 'Welche Methode ist meist performanter?', a: 'Iteration ist meist schneller und speichereffizienter, da der Overhead der Funktionsaufrufe entfällt.' },
+
+    // --- Unterpunkt 5: Such- & Sortieralgorithmen (10 Karten) ---
+    { id: '2.1_41', q: 'Wie funktioniert Bubble-Sort?', a: 'Benachbarte Elemente werden verglichen und bei falscher Sortierung vertauscht. Das größte Element "steigt auf" wie eine Blase.' },
+    { id: '2.1_42', q: 'Kernprinzip von Selection-Sort?', a: 'Es wird das kleinste Element gesucht und an die erste Position getauscht, dann das zweitkleinste usw.' },
+    { id: '2.1_43', q: 'Kernprinzip von Insertion-Sort?', a: 'Elemente werden nacheinander an die bereits sortierte Teilmenge an der richtigen Stelle "eingefügt".' },
+    { id: '2.1_44', q: 'Was ist die Binäre Suche?', a: 'Ein effizientes Suchverfahren für SORTIERTE Listen, das die Liste immer wieder in der Mitte teilt (Divide & Conquer).' },
+    { id: '2.1_45', q: 'Voraussetzung für die Binäre Suche?', a: 'Die Daten müssen zwingend sortiert vorliegen.' },
+    { id: '2.1_46', q: 'Was ist Quicksort?', a: 'Ein schneller, rekursiver Algorithmus, der die Liste anhand eines Pivotelements in zwei Hälften teilt.' },
+    { id: '2.1_47', q: 'Was bedeutet "stabil" bei Sortieralgorithmen?', a: 'Elemente mit gleichem Sortierschlüssel behalten ihre relative Reihenfolge zueinander bei.' },
+    { id: '2.1_48', q: 'Was ist der Unterschied zwischen In-Place und Out-of-Place?', a: 'In-Place benötigt kaum extra Speicher (sortiert im Original-Array). Out-of-Place benötigt Kopien.' },
+    { id: '2.1_49', q: 'Wie viele Vergleiche benötigt die Lineare Suche im Worst Case?', a: 'n Vergleiche (jedes Element muss einmal angeschaut werden).' },
+    { id: '2.1_50', q: 'Welcher Sortieralgorithmus ist für sehr kleine Listen oft am schnellsten?', a: 'Insertion-Sort (geringer Overhead).' },
+
+    // --- Unterpunkt 6: Komplexität (O-Notation) (10 Karten) ---
+    { id: '2.1_51', q: 'Was beschreibt die O-Notation (Landau-Symbole)?', a: 'Das asymptotische Zeit- oder Platzverhalten eines Algorithmus bei wachsender Eingabemenge.' },
+    { id: '2.1_52', q: 'Was bedeutet O(1)?', a: 'Konstante Laufzeit. Unabhängig von der Eingabemenge (z.B. Zugriff auf Array-Index).' },
+    { id: '2.1_53', q: 'Was bedeutet O(n)?', a: 'Lineare Laufzeit. Zeit wächst proportional zur Menge (z.B. eine einfache Schleife).' },
+    { id: '2.1_54', q: 'Was bedeutet O(n²)?', a: 'Quadratische Laufzeit. Zeit wächst quadratisch (z.B. zwei verschachtelte Schleifen, wie bei Bubble-Sort).' },
+    { id: '2.1_55', q: 'Welche Komplexität hat die Binäre Suche?', a: 'O(log n) – Logarithmische Laufzeit (sehr effizient).' },
+    { id: '2.1_56', q: 'Welche Komplexität haben effiziente Sortierer wie Quicksort/Mergesort?', a: 'O(n log n).' },
+    { id: '2.1_57', q: 'Was ist der "Worst Case"?', a: 'Das Szenario, in dem der Algorithmus am längsten braucht (wichtigstes Maß in der O-Notation).' },
+    { id: '2.1_58', q: 'Was ist der "Best Case"?', a: 'Das Szenario, in dem der Algorithmus am schnellsten fertig ist (z.B. Liste ist bereits sortiert).' },
+    { id: '2.1_59', q: 'Was bedeutet "Platzkomplexität"?', a: 'Wie viel zusätzlicher Speicher (RAM) ein Algorithmus im Verhältnis zur Eingabegröße benötigt.' },
+    { id: '2.1_60', q: 'Warum ignoriert man konstante Faktoren (z.B. 2n -> O(n))?', a: 'Weil bei sehr großen Eingabemengen das Wachstumsverhalten (linear, quadratisch etc.) entscheidend ist, nicht das Detail.' },
+
+    // --- Unterpunkt 7: Fehlerbehandlung (10 Karten) ---
+    { id: '2.1_61', q: 'Was ist ein "Syntaxfehler"?', a: 'Ein Fehler gegen die Grammatikregeln der Programmiersprache (Code lässt sich nicht kompilieren).' },
+    { id: '2.1_62', q: 'Was ist ein "Laufzeitfehler" (Runtime Error)?', a: 'Ein Fehler, der erst während der Ausführung auftritt (z.B. Division durch Null).' },
+    { id: '2.1_63', q: 'Was ist ein "Logikfehler"?', a: 'Das Programm läuft fehlerfrei durch, liefert aber ein falsches Ergebnis.' },
+    { id: '2.1_64', q: 'Wofür steht der "Try"-Block?', a: 'Hier steht der Code, der potenziell eine Ausnahme (Exception) auslösen könnte.' },
+    { id: '2.1_65', q: 'Wofür steht der "Catch"-Block?', a: 'Hier wird die ausgelöste Exception gefangen und der Fehler behandelt.' },
+    { id: '2.1_66', q: 'Wofür wird der "Finally"-Block genutzt?', a: 'Code, der IMMER ausgeführt wird, egal ob ein Fehler auftrat oder nicht (z.B. Dateien schließen).' },
+    { id: '2.1_67', q: 'Was bedeutet "Throw" (oder Raise)?', a: 'Das explizite Auslösen einer Fehlermeldung/Exception im Programmcode.' },
+    { id: '2.1_68', q: 'Was ist eine "NullPointerException"?', a: 'Zugriff auf ein Objekt oder eine Variable, die noch nicht instanziiert wurde (auf "null" zeigt).' },
+    { id: '2.1_69', q: 'Was bedeutet "Error Propagation"?', a: 'Ein Fehler wird nicht in der aktuellen Funktion behandelt, sondern an die aufrufende Ebene weitergegeben.' },
+    { id: '2.1_70', q: 'Was versteht man unter defensiver Programmierung?', a: 'Code so schreiben, dass er mit unvorhergesehenen Inputs oder Zuständen sicher umgehen kann.' }
+  ],
+
+  // Topic 2.2: Datenbank-Design & Normalisierung (50 Karten)
+  '2.2': [
+    // --- Unterpunkt 1: ER-Modell (ERM) & Kardinalitäten (10 Karten) ---
+    { id: '2.2_1', q: 'Was stellt ein ER-Modell (ERM) dar?', a: 'Einen konzeptionellen Entwurf der Datenstruktur mit Entitäten, Attributen und deren Beziehungen.' },
+    { id: '2.2_2', q: 'Was ist eine Entität?', a: 'Ein eindeutig identifizierbares Objekt der realen Welt oder der Vorstellung (z.B. "Kunde", "Rechnung").' },
+    { id: '2.2_3', q: 'Was beschreibt eine 1:n Beziehung?', a: 'Ein Datensatz aus Tabelle A ist mit beliebig vielen aus Tabelle B verknüpft, aber ein Datensatz aus B nur mit genau einem aus A.' },
+    { id: '2.2_4', q: 'Was ist eine m:n Beziehung?', a: 'Viele Datensätze aus Tabelle A können mit vielen aus Tabelle B verknüpft sein (erfordert eine Hilfstabelle/Zwischentabelle).' },
+    { id: '2.2_5', q: 'Was bedeutet die Kardinalität (0,1)?', a: 'Ein Datensatz kann mit maximal einem anderen verknüpft sein, muss es aber nicht (optional).' },
+    { id: '2.2_6', q: 'Was ist ein Attribut im ERM?', a: 'Eine Eigenschaft einer Entität (z.B. "Name", "Geburtsdatum").' },
+    { id: '2.2_7', q: 'Was ist ein "identifizierendes Attribut"?', a: 'Ein Attribut, das eine Entität eindeutig kennzeichnet (Primärschlüssel-Kandidat).' },
+    { id: '2.2_8', q: 'Wie wird eine m:n Beziehung in ein relationales Modell überführt?', a: 'Durch Erstellung einer Zwischentabelle, die die Primärschlüssel beider Tabellen als Fremdschlüssel enthält.' },
+    { id: '2.2_9', q: 'Was beschreibt eine 1:1 Beziehung?', a: 'Jeder Datensatz aus Tabelle A ist mit genau einem Datensatz aus Tabelle B verknüpft.' },
+    { id: '2.2_10', q: 'Was bedeutet "Kardinalität" allgemein?', a: 'Die Angabe über die Anzahl der an einer Beziehung beteiligten Entitäten.' },
+
+    // --- Unterpunkt 2: Relationales Modell (Keys) (10 Karten) ---
+    { id: '2.2_11', q: 'Definition eines Primärschlüssels (PK)?', a: 'Ein Attribut oder eine Attributkombination, die jeden Datensatz einer Tabelle eindeutig identifiziert.' },
+    { id: '2.2_12', q: 'Was ist ein Fremdschlüssel (FK)?', a: 'Ein Attribut einer Tabelle, das auf den Primärschlüssel einer anderen Tabelle verweist, um eine Beziehung herzustellen.' },
+    { id: '2.2_13', q: 'Was ist ein zusammengesetzter Primärschlüssel?', a: 'Ein PK, der aus zwei oder mehr Attributen besteht (oft in m:n Zwischentabellen genutzt).' },
+    { id: '2.2_14', q: 'Darf ein Primärschlüssel den Wert NULL enthalten?', a: 'Nein (Entity Integrity), ein PK muss immer einen eindeutigen Wert besitzen.' },
+    { id: '2.2_15', q: 'Was ist ein "Surrogatschlüssel" (künstlicher Schlüssel)?', a: 'Ein vom System generierter PK ohne fachliche Bedeutung (z.B. eine Auto-Increment ID).' },
+    { id: '2.2_16', q: 'Was ist ein "Natürlicher Schlüssel"?', a: 'Ein PK aus Attributen, die bereits fachlich vorhanden sind (z.B. ISBN, E-Mail-Adresse).' },
+    { id: '2.2_17', q: 'Was ist ein "Superschlüssel"?', a: 'Jede Menge von Attributen, die einen Datensatz eindeutig identifiziert (auch unnötige Attribute enthalten).' },
+    { id: '2.2_18', q: 'Was ist ein "Schlüsselkandidat"?', a: 'Ein minimaler Superschlüssel (enthält keine Attribute, die weggelassen werden könnten).' },
+    { id: '2.2_19', q: 'Was bedeutet "Eindeutigkeit" (Unique Constraint)?', a: 'Stellt sicher, dass alle Werte in einer Spalte verschieden sind (darf aber meist NULL sein, im Gegensatz zum PK).' },
+    { id: '2.2_20', q: 'Zweck eines Index in einer Datenbank?', a: 'Beschleunigung von Suchabfragen auf bestimmten Spalten.' },
+
+    // --- Unterpunkt 3: Normalisierung (1. - 3. NF) (10 Karten) ---
+    { id: '2.2_21', q: 'Was ist das Ziel der Normalisierung?', a: 'Vermeidung von Redunanzen und Anomalien (Einfüge-, Lösch-, Änderungsanomalien).' },
+    { id: '2.2_22', q: 'Wann ist eine Tabelle in der 1. Normalform (1. NF)?', a: 'Wenn alle Attribute atomar sind (nicht weiter zerlegbar) und keine Wiederholungsgruppen existieren.' },
+    { id: '2.2_23', q: 'Wann ist eine Tabelle in der 2. Normalform (2. NF)?', a: 'Wenn sie in der 1. NF ist und jedes Nicht-Schlüsselattribut voll funktional vom Primärschlüssel abhängt.' },
+    { id: '2.2_24', q: 'Wann ist eine Tabelle in der 3. Normalform (3. NF)?', a: 'Wenn sie in der 2. NF ist und kein Nicht-Schlüsselattribut transitiv vom Primärschlüssel abhängt.' },
+    { id: '2.2_25', q: 'Was bedeutet "atomar"?', a: 'Ein Wert ist nicht weiter sinnvoll teilbar (z.B. Vorname und Nachname in getrennten Spalten).' },
+    { id: '2.2_26', q: 'Was ist eine "transitive Abhängigkeit"?', a: 'Wenn ein Attribut A vom Attribut B abhängt, und B wiederum vom Primärschlüssel abhängt.' },
+    { id: '2.2_27', q: 'Was ist eine "Löschanomalie"?', a: 'Beim Löschen eines Datensatzes gehen ungewollt Informationen verloren, die man eigentlich behalten wollte.' },
+    { id: '2.2_28', q: 'Was ist eine "Update-Anomalie"?', a: 'Gleiche Daten müssen an mehreren Stellen geändert werden; wird eine Stelle vergessen, entstehen inkonsistente Daten.' },
+    { id: '2.2_29', q: 'Was bedeutet "partielle Abhängigkeit" (Bezug zur 2. NF)?', a: 'Ein Attribut hängt nur von einem TEIL des zusammengesetzten Primärschlüssels ab.' },
+    { id: '2.2_30', q: 'Nenne einen Nachteil von zu hoher Normalisierung.', a: 'Die Performance kann sinken, da für Abfragen viele Tabellen per JOIN verknüpft werden müssen.' },
+
+    // --- Unterpunkt 4: Referenzielle Integrität & Löschweitergabe (10 Karten) ---
+    { id: '2.2_31', q: 'Was bedeutet "Referenzielle Integrität"?', a: 'Jeder Fremdschlüsselwert muss entweder existieren (als PK in der Zieltabelle) oder NULL sein.' },
+    { id: '2.2_32', q: 'Was bewirkt "ON DELETE CASCADE"?', a: 'Wird ein Datensatz in der Elterntabelle gelöscht, werden alle verknüpften Datensätze in der Kindtabelle automatisch mitgelöscht.' },
+    { id: '2.2_33', q: 'Was bewirkt "ON DELETE SET NULL"?', a: 'Wird der Eltern-Datensatz gelöscht, wird der Fremdschlüssel in der Kindtabelle auf NULL gesetzt.' },
+    { id: '2.2_34', q: 'Was bewirkt "ON DELETE RESTRICT" (oder NO ACTION)?', a: 'Das Löschen des Eltern-Datensatzes wird verhindert, solange noch Kind-Datensätze darauf verweisen.' },
+    { id: '2.2_35', q: 'Was ist ein "Orphan" (Waisen-Datensatz)?', a: 'Ein Datensatz in einer Kindtabelle, dessen Fremdschlüssel auf einen nicht mehr existierenden PK verweist (Verletzung der Integrität).' },
+    { id: '2.2_36', q: 'Wann nutzt man SET NULL statt CASCADE?', a: 'Wenn der Kind-Datensatz auch ohne die Verknüpfung zur Eltern-Entität sinnvoll weiter existieren darf.' },
+    { id: '2.2_37', q: 'Gilt referenzielle Integrität auch für Updates?', a: 'Ja, mit "ON UPDATE CASCADE" werden PK-Änderungen an alle Fremdschlüssel weitergegeben.' },
+    { id: '2.2_38', q: 'Welche Datenbank-Objekte erzwingen die referenzielle Integrität?', a: 'Foreign Key Constraints.' },
+    { id: '2.2_39', q: 'Warum ist referenzielle Integrität wichtig?', a: 'Sie sichert die logische Konsistenz der Daten über Tabellengrenzen hinweg.' },
+    { id: '2.2_40', q: 'Kann ein Fremdschlüssel auf die eigene Tabelle verweisen?', a: 'Ja (Self-Referencing FK), z.B. bei Mitarbeiter-Vorgesetzten-Beziehungen.' },
+
+    // --- Unterpunkt 5: NoSQL-Ansätze (10 Karten) ---
+    { id: '2.2_41', q: 'Was bedeutet die Abkürzung NoSQL?', a: '"Not only SQL" – Datenbanken, die ein nicht-relationales Datenmodell nutzen.' },
+    { id: '2.2_42', q: 'Was ist eine Document-Store Datenbank?', a: 'Speichert Daten in Dokumenten (meist JSON/BSON), z.B. MongoDB.' },
+    { id: '2.2_43', q: 'Was zeichnet eine Key-Value-Datenbank aus?', a: 'Sehr simpel: Ein eindeutiger Schlüssel zeigt auf einen Wert (z.B. Redis).' },
+    { id: '2.2_44', q: 'Wofür nutzt man Graph-Datenbanken?', a: 'Zur Speicherung stark vernetzter Daten (Knoten und Kanten), z.B. soziale Netzwerke (Neo4j).' },
+    { id: '2.2_45', q: 'Was ist der Hauptvorteil von NoSQL gegenüber SQL?', a: 'Hohe Skalierbarkeit (Horizontal Scaling) und flexibles Schema (Schema-less).' },
+    { id: '2.2_46', q: 'Was bedeutet "Schema-less" (Schema-Freiheit)?', a: 'Datensätze innerhalb einer Sammlung können unterschiedliche Felder/Strukturen haben.' },
+    { id: '2.2_47', q: 'Was ist das BASE-Prinzip bei NoSQL (Gegensatz zu ACID)?', a: 'Basically Available, Soft state, Eventual consistency (schließliche Konsistenz).' },
+    { id: '2.2_48', q: 'Was bedeutet "Eventual Consistency"?', a: 'Nach einer Änderung sind die Daten nicht sofort auf allen Knoten aktuell, werden es aber nach kurzer Zeit.' },
+    { id: '2.2_49', q: 'Was ist eine Wide-Column-Datenbank?', a: 'Speichert Daten in Spaltenfamilien statt Zeilen, optimiert für sehr große Datenmengen (z.B. Cassandra).' },
+    { id: '2.2_50', q: 'Wann sollte man NoSQL statt einer relationalen DB wählen?', a: 'Bei unstrukturierten Daten, extrem hohen Schreiblasten oder wenn horizontale Skalierbarkeit zwingend ist.' }
+  ],
+
+  // Topic 2.3: Fortgeschrittenes SQL (80 Karten)
+  '2.3': [
+    // --- Unterpunkt 1: DQL (Komplexe JOINs & Subqueries) (10 Karten) ---
+    { id: '2.3_1', q: 'Was ist ein INNER JOIN?', a: 'Gibt nur die Datensätze zurück, die in beiden Tabellen eine Übereinstimmung haben.' },
+    { id: '2.3_2', q: 'Was ist ein LEFT (OUTER) JOIN?', a: 'Gibt alle Datensätze der linken Tabelle zurück und die passenden der rechten. Fehlende Werte rechts werden NULL.' },
+    { id: '2.3_3', q: 'Wofür nutzt man einen SELF JOIN?', a: 'Um eine Tabelle mit sich selbst zu verknüpfen (z.B. bei hierarchischen Daten wie Mitarbeiter-Vorgesetzter).' },
+    { id: '2.3_4', q: 'Unterschied zwischen WHERE und HAVING?', a: 'WHERE filtert einzelne Zeilen VOR der Gruppierung. HAVING filtert Gruppen NACH der Aggregation.' },
+    { id: '2.3_5', q: 'Was bewirkt der Operator EXISTS in einer Subquery?', a: 'Gibt TRUE zurück, wenn die Unterabfrage mindestens einen Datensatz findet (performanter als IN bei großen Mengen).' },
+    { id: '2.3_6', q: 'Was ist ein FULL OUTER JOIN?', a: 'Gibt alle Datensätze beider Tabellen zurück. Gibt es keine Übereinstimmung, wird die Gegenseite mit NULL aufgefüllt.' },
+    { id: '2.3_7', q: 'Was bewirkt UNION (im Gegensatz zu JOIN)?', a: 'Kombiniert die Ergebnismengen zweier SELECTs vertikal (übereinander). Duplikate werden entfernt.' },
+    { id: '2.3_8', q: 'Was ist eine "korrelierte Unterabfrage"?', a: 'Eine Subquery, die Werte aus der äußeren Abfrage verwendet und für jede Zeile der äußeren Abfrage neu ausgeführt wird.' },
+    { id: '2.3_9', q: 'Was bewirkt der Operator LIKE mit dem Platzhalter %?', a: 'Sucht nach Mustern; % steht für beliebig viele Zeichen (auch Null).' },
+    { id: '2.3_10', q: 'Was bewirkt DISTINCT in einem SELECT?', a: 'Entfernt doppelte Zeilen aus der Ergebnismenge.' },
+
+    // --- Unterpunkt 2: Aggregat-Funktionen (10 Karten) ---
+    { id: '2.3_11', q: 'Nenne die 5 wichtigsten SQL-Aggregatfunktionen.', a: 'COUNT, SUM, AVG, MIN, MAX.' },
+    { id: '2.3_12', q: 'Was passiert mit NULL-Werten bei Aggregatfunktionen wie SUM oder AVG?', a: 'Sie werden ignoriert (nicht mitgezählt/berechnet).' },
+    { id: '2.3_13', q: 'Warum muss jede Spalte im SELECT, die keine Aggregatfunktion ist, im GROUP BY stehen?', a: 'Weil die Datenbank sonst nicht weiß, wie sie die unterschiedlichen Werte der Spalte zu einem Ergebniswert zusammenfassen soll.' },
+    { id: '2.3_14', q: 'Was bewirkt COUNT(*)?', a: 'Zählt alle Zeilen der Tabelle, inklusive Zeilen mit NULL-Werten.' },
+    { id: '2.3_15', q: 'Was bewirkt COUNT(Spaltenname)?', a: 'Zählt nur die Zeilen, in denen die angegebene Spalte NICHT NULL ist.' },
+    { id: '2.3_16', q: 'Was ist eine Window Function (z.B. OVER)?', a: 'Führt Berechnungen über eine Menge von Zeilen durch, die mit der aktuellen Zeile in Beziehung stehen, ohne die Zeilen zu gruppieren.' },
+    { id: '2.3_17', q: 'Zweck von PARTITION BY in Window Functions?', a: 'Unterteilt das Ergebnisset in Gruppen, auf die die Funktion separat angewendet wird (ähnlich Group By, aber pro Zeile).' },
+    { id: '2.3_18', q: 'Was macht die Funktion RANK()?', a: 'Vergibt Rangfolgenummern. Bei Gleichstand wird dieselbe Nummer vergeben und die nächste Nummer übersprungen.' },
+    { id: '2.3_19', q: 'Was macht DENSE_RANK()?', a: 'Wie RANK(), aber ohne Lücken in der Nummerierung bei Gleichstand.' },
+    { id: '2.3_20', q: 'Was bewirkt die Funktion COALESCE(val1, val2, ...)?', a: 'Gibt den ersten Wert der Liste zurück, der NICHT NULL ist.' },
+
+    // --- Unterpunkt 3: DML (Insert, Update, Delete) (10 Karten) ---
+    { id: '2.3_21', q: 'Wie kopiert man Daten von einer Tabelle in eine andere (INSERT INTO SELECT)?', a: 'INSERT INTO ZielTabelle (spalten) SELECT spalten FROM QuellTabelle WHERE ...' },
+    { id: '2.3_22', q: 'Was passiert bei einem UPDATE ohne WHERE-Klausel?', a: 'Es werden ALLE Datensätze der Tabelle mit dem neuen Wert überschrieben.' },
+    { id: '2.3_23', q: 'Was ist der Unterschied zwischen DELETE und TRUNCATE?', a: 'DELETE löscht Zeilen einzeln (logbar, Trigger feuern). TRUNCATE leert die Tabelle komplett (schneller, kein Logging der Einzelzeilen).' },
+    { id: '2.3_24', q: 'Darf man in einem UPDATE-Statement JOINs verwenden?', a: 'Ja, in vielen SQL-Dialekten kann man Tabellen verknüpfen, um Werte basierend auf anderen Tabellen zu aktualisieren.' },
+    { id: '2.3_25', q: 'Was bedeutet "Atomarität" bei DML-Operationen?', a: 'Eine Operation wird entweder ganz oder gar nicht ausgeführt (Alles-oder-Nichts-Prinzip).' },
+    { id: '2.3_26', q: 'Zweck der RETURNING-Klausel (in manchen Dialekten)?', a: 'Gibt Werte der gerade eingefügten oder geänderten Zeilen sofort zurück (z.B. die neue ID).' },
+    { id: '2.3_27', q: 'Was bewirkt ON CONFLICT (oder REPLACE/UPSERT)?', a: 'Legt fest, was passieren soll, wenn ein INSERT einen Unique-Constraint verletzt (z.B. stattdessen Update ausführen).' },
+    { id: '2.3_28', q: 'Können DELETE-Statements Subqueries enthalten?', a: 'Ja, um z.B. alle Kunden zu löschen, die keine Bestellungen haben: DELETE FROM Kunden WHERE NOT EXISTS (...).' },
+    { id: '2.3_29', q: 'Warum ist es riskant, IDs manuell per UPDATE zu ändern?', a: 'Gefahr von Verletzungen der referenziellen Integrität (Fremdschlüssel-Konflikte).' },
+    { id: '2.3_30', q: 'Was ist "Mass Data Loading"?', a: 'Das hocheffiziente Einfügen sehr großer Datenmengen (oft über spezielle Tools wie COPY oder Bulk Insert).' },
+
+    // --- Unterpunkt 4: DDL (Create, Alter, Drop) (10 Karten) ---
+    { id: '2.3_31', q: 'Was bewirkt der Constraint DEFAULT?', a: 'Setzt einen festen Wert, falls beim INSERT kein Wert für diese Spalte angegeben wird.' },
+    { id: '2.3_32', q: 'Zweck des CHECK-Constraints?', a: 'Stellt sicher, dass alle Werte in einer Spalte eine bestimmte Bedingung erfüllen (z.B. Alter >= 18).' },
+    { id: '2.3_33', q: 'Wie fügt man einer bestehenden Tabelle eine Spalte hinzu?', a: 'ALTER TABLE tabellenname ADD spaltenname datentyp;' },
+    { id: '2.3_34', q: 'Unterschied DROP TABLE vs. TRUNCATE TABLE?', a: 'DROP löscht die gesamte Tabelle inkl. Struktur. TRUNCATE löscht nur die Daten, die Struktur bleibt erhalten.' },
+    { id: '2.3_35', q: 'Was bewirkt CASCADE bei einem DROP TABLE?', a: 'Löscht auch automatisch alle abhängigen Objekte (z.B. Views oder Constraints), die auf diese Tabelle verweisen.' },
+    { id: '2.3_36', q: 'Was ist der Datentyp VARCHAR(n)?', a: 'Zeichenkette mit variabler Länge bis maximal n Zeichen (platzsparender als CHAR).' },
+    { id: '2.3_37', q: 'Was ist der Datentyp DECIMAL(p, s)?', a: 'Exakter numerischer Typ. p = Gesamtzahl der Ziffern, s = Nachkommastellen.' },
+    { id: '2.3_38', q: 'Wie benennt man eine Tabelle um?', a: 'ALTER TABLE alter_name RENAME TO neuer_name;' },
+    { id: '2.3_39', q: 'Was bewirkt AUTO_INCREMENT (oder SERIAL/IDENTITY)?', a: 'Erzeugt automatisch eine fortlaufende Nummer für neue Datensätze (meist für PK).' },
+    { id: '2.3_40', q: 'Können Constraints nachträglich hinzugefügt werden?', a: 'Ja, über ALTER TABLE ADD CONSTRAINT ...' },
+
+    // --- Unterpunkt 5: Views, Indizes & Performance (10 Karten) ---
+    { id: '2.3_41', q: 'Was ist eine View (Sicht)?', a: 'Eine gespeicherte SELECT-Abfrage, die wie eine virtuelle Tabelle verwendet werden kann.' },
+    { id: '2.3_42', q: 'Vorteil einer View?', a: 'Kapselung komplexer Abfragen, Sicherheit (Nutzer sieht nur bestimmte Spalten), Vereinfachung für den Client.' },
+    { id: '2.3_43', q: 'Was ist ein B-Baum Index (B-Tree)?', a: 'Die Standard-Indexstruktur in DBs; erlaubt Suche, Einfügen und Löschen in logarithmischer Zeit.' },
+    { id: '2.3_44', q: 'Nenne einen Nachteil von zu vielen Indizes.', a: 'Schreibzugriffe (INSERT/UPDATE/DELETE) werden langsamer, da die Indizes mit aktualisiert werden müssen.' },
+    { id: '2.3_45', q: 'Wofür nutzt man den EXPLAIN-Befehl?', a: 'Um den Ausführungsplan einer Abfrage zu sehen und Performance-Engpässe zu finden.' },
+    { id: '2.3_46', q: 'Was ist ein "Full Table Scan"?', a: 'Die DB muss jede einzelne Zeile lesen, da kein passender Index vorhanden ist (langsam bei großen Daten).' },
+    { id: '2.3_47', q: 'Was ist ein zusammengesetzter Index?', a: 'Ein Index, der über mehrere Spalten gleichzeitig gebildet wird.' },
+    { id: '2.3_48', q: 'Was ist eine "Materialized View"?', a: 'Eine View, deren Ergebnis physisch gespeichert wird (erfordert manuelle/zeitgesteuerte Aktualisierung).' },
+    { id: '2.3_49', q: 'Zweck der Datenbank-Denormalisierung?', a: 'Gezielte Redundanz einbauen, um die Lese-Performance (weniger Joins) zu erhöhen.' },
+    { id: '2.3_50', q: 'Was bewirkt ein Clustered Index?', a: 'Bestimmt die physische Reihenfolge der Datensätze auf der Festplatte (meist der PK).' },
+
+    // --- Unterpunkt 6: Transaktionen & ACID (10 Karten) ---
+    { id: '2.3_51', q: 'Wofür steht das A in ACID?', a: 'Atomicity (Atomarität): Eine Transaktion wird ganz oder gar nicht ausgeführt.' },
+    { id: '2.3_52', q: 'Wofür steht das C in ACID?', a: 'Consistency (Konsistenz): Die Datenbank ist vor und nach der Transaktion in einem validen Zustand.' },
+    { id: '2.3_53', q: 'Wofür steht das I in ACID?', a: 'Isolation: Parallel laufende Transaktionen beeinflussen sich nicht gegenseitig.' },
+    { id: '2.3_54', q: 'Wofür steht das D in ACID?', a: 'Durability (Dauerhaftigkeit): Erfolgreich abgeschlossene Daten bleiben auch bei Systemfehlern erhalten.' },
+    { id: '2.3_55', q: 'Was bewirkt der Befehl COMMIT?', a: 'Schließt eine Transaktion erfolgreich ab und schreibt alle Änderungen dauerhaft.' },
+    { id: '2.3_56', q: 'Was bewirkt der Befehl ROLLBACK?', a: 'Bricht eine Transaktion ab und macht alle ungespeicherten Änderungen rückgängig.' },
+    { id: '2.3_57', q: 'Was ist ein "Deadlock"?', a: 'Zwei Transaktionen blockieren sich gegenseitig, da jede auf eine Ressource wartet, die die andere hält.' },
+    { id: '2.3_58', q: 'Was ist ein "Dirty Read"?', a: 'Eine Transaktion liest Daten, die von einer anderen Transaktion geändert, aber noch nicht committet wurden.' },
+    { id: '2.3_59', q: 'Was ist das "Transaction Log"?', a: 'Eine Datei, in der alle Änderungen protokolliert werden, um Wiederherstellungen nach Abstürzen zu ermöglichen.' },
+    { id: '2.3_60', q: 'Was bewirkt ein SAVEPOINT?', a: 'Setzt eine Markierung innerhalb einer Transaktion, zu der man per Rollback zurückkehren kann, ohne alles abzubrechen.' },
+
+    // --- Unterpunkt 7: Stored Procedures, Trigger & Functions (10 Karten) ---
+    { id: '2.3_61', q: 'Was ist eine Stored Procedure?', a: 'Ein im Datenbanksystem gespeichertes Programm (SQL-Skript), das Parameter annehmen kann.' },
+    { id: '2.3_62', q: 'Was ist ein Datenbank-Trigger?', a: 'Code, der automatisch bei bestimmten Ereignissen (INSERT, UPDATE, DELETE) ausgeführt wird.' },
+    { id: '2.3_63', q: 'Unterschied zwischen Stored Procedure und Function?', a: 'Functions müssen einen Wert zurückgeben und können in SELECTs genutzt werden. Procedures geben meist nichts zurück.' },
+    { id: '2.3_64', q: 'Vorteil von Stored Procedures?', a: 'Reduzierung des Netzwerkverkehrs, bessere Performance (vorkompiliert), zentrale Logik.' },
+    { id: '2.3_65', q: 'Was ist ein "BEFORE INSERT" Trigger?', a: 'Wird ausgeführt, BEVOR die Daten in die Tabelle geschrieben werden (gut für Validierung/Manipulation).' },
+    { id: '2.3_66', q: 'Was ist ein "AFTER DELETE" Trigger?', a: 'Wird ausgeführt, nachdem ein Datensatz gelöscht wurde (gut für Logging/Auditing).' },
+    { id: '2.3_67', q: 'Was bedeutet "Deterministic" bei einer Function?', a: 'Die Funktion liefert bei gleichen Eingabeparametern immer das absolut gleiche Ergebnis.' },
+    { id: '2.3_68', q: 'Was ist PL/SQL oder T-SQL?', a: 'Proprietäre Erweiterungen von SQL um prozedurale Elemente (Schleifen, Variablen) von Oracle bzw. Microsoft.' },
+    { id: '2.3_69', q: 'Kann ein Trigger ein ROLLBACK auslösen?', a: 'Ja, um eine Operation zu verhindern, die gegen komplexe Geschäftsregeln verstößt.' },
+    { id: '2.3_70', q: 'Nenne eine Gefahr bei Triggern.', a: 'Kettenreaktionen (Trigger löst Trigger aus) können die Performance extrem verschlechtern und die Fehlersuche erschweren.' },
+
+    // --- Unterpunkt 8: DCL (Rechteverwaltung) (10 Karten) ---
+    { id: '2.3_71', q: 'Was bewirkt der Befehl GRANT?', a: 'Erteilt einem Benutzer oder einer Rolle bestimmte Berechtigungen (z.B. SELECT, INSERT).' },
+    { id: '2.3_72', q: 'Was bewirkt der Befehl REVOKE?', a: 'Entzieht einem Benutzer oder einer Rolle zuvor erteilte Berechtigungen.' },
+    { id: '2.3_73', q: 'Was ist eine "Rolle" in der Rechteverwaltung?', a: 'Eine Sammlung von Berechtigungen, die man mehreren Benutzern gleichzeitig zuweisen kann.' },
+    { id: '2.3_74', q: 'Was bedeutet GRANT OPTION?', a: 'Der berechtigte User darf die erhaltenen Rechte selbst an andere User weitergeben.' },
+    { id: '2.3_75', q: 'Was ist ein "Schema" in einer Datenbank?', a: 'Ein Namensraum, der logisch zusammengehörige Objekte (Tabellen, Views etc.) gruppiert.' },
+    { id: '2.3_76', q: 'Zweck des Least-Privilege-Prinzips?', a: 'Nutzer erhalten nur die minimal notwendigen Rechte für ihre Aufgabe, um das Sicherheitsrisiko zu minimieren.' },
+    { id: '2.3_77', q: 'Kann man Berechtigungen auf Spaltenebene vergeben?', a: 'Ja, in vielen DB-Systemen kann man z.B. SELECT nur für bestimmte Spalten erlauben.' },
+    { id: '2.3_78', q: 'Was ist der User "public" (in manchen Systemen)?', a: 'Eine Standardrolle, die alle registrierten Datenbankbenutzer umfasst.' },
+    { id: '2.3_79', q: 'Was bewirkt DENY (in SQL Server)?', a: 'Explizites Verbieten eines Rechts, das Vorrang vor erlaubten Rechten hat.' },
+    { id: '2.3_80', q: 'Wo werden die Benutzerinformationen in der DB gespeichert?', a: 'In systemeigenen Metadaten-Tabellen (Data Dictionary).' }
+  ],
+
+  // Topic 3.1: Netzwerktechnik & Cloud (50 Karten)
+  '3.1': [
+    // --- Unterpunkt 1: TCP/IP & OSI (10 Karten) ---
+    { id: '3.1_1', q: 'Nenne die 7 Schichten des OSI-Modells in der richtigen Reihenfolge.', a: '1. Physical, 2. Data Link, 3. Network, 4. Transport, 5. Session, 6. Presentation, 7. Application.' },
+    { id: '3.1_2', q: 'Welche Aufgabe hat die Schicht 3 (Network Layer)?', a: 'Logische Adressierung (IP-Adressen) und Routing von Datenpaketen zwischen Netzwerken.' },
+    { id: '3.1_3', q: 'Welche Aufgabe hat die Schicht 4 (Transport Layer)?', a: 'Ende-zu-Ende Kommunikation, Segmentierung und Fehlerkontrolle (TCP/UDP).' },
+    { id: '3.1_4', q: 'Hauptunterschied zwischen TCP und UDP?', a: 'TCP: Verbindungsorientiert, zuverlässig (Handshake). UDP: Verbindungslos, schnell, keine Empfangsbestätigung.' },
+    { id: '3.1_5', q: 'Was ist der "Three-Way-Handshake" bei TCP?', a: 'Verbindungsaufbau: 1. SYN, 2. SYN-ACK, 3. ACK.' },
+    { id: '3.1_6', q: 'Was versteht man unter "Kapselung" (Encapsulation)?', a: 'Daten einer höheren Schicht werden als Nutzlast (Payload) in ein Paket der tieferen Schicht verpackt.' },
+    { id: '3.1_7', q: 'Auf welcher OSI-Schicht arbeitet ein Router?', a: 'Schicht 3 (Network Layer).' },
+    { id: '3.1_8', q: 'Auf welcher OSI-Schicht arbeitet ein Layer-2-Switch?', a: 'Schicht 2 (Data Link Layer).' },
+    { id: '3.1_9', q: 'Wofür steht die Abkürzung IP und welche Versionen sind aktuell?', a: 'Internet Protocol; Version 4 (IPv4) und Version 6 (IPv6).' },
+    { id: '3.1_10', q: 'Was beschreibt der Begriff "Port" in der Transportschicht?', a: 'Eine logische Adresse (0-65535), um Datenströme bestimmten Anwendungen zuzuordnen (z.B. Port 80 für HTTP).' },
+
+    // --- Unterpunkt 2: Netzwerkdienste (DNS, DHCP etc.) (10 Karten) ---
+    { id: '3.1_11', q: 'Was ist die Hauptaufgabe von DNS?', a: 'Namensauflösung: Umwandlung von Domainnamen (www.google.de) in IP-Adressen.' },
+    { id: '3.1_12', q: 'Unterschied zwischen rekursiver und iterativer DNS-Abfrage?', a: 'Rekursiv: Der DNS-Server übernimmt die komplette Suche. Iterativ: Der Server gibt nur Verweise auf andere Nameserver zurück.' },
+    { id: '3.1_13', q: 'Welche Informationen liefert ein DHCP-Server an einen Client?', a: 'IP-Adresse, Subnetzmaske, Standard-Gateway, DNS-Server.' },
+    { id: '3.1_14', q: 'Wofür steht das "S" in HTTPS?', a: 'Secure; kennzeichnet die Verschlüsselung der HTTP-Übertragung mittels TLS/SSL.' },
+    { id: '3.1_15', q: 'Was ist der Standardport für SSH und wofür wird es genutzt?', a: 'Port 22; zur sicheren, verschlüsselten Remote-Verwaltung von Computern.' },
+    { id: '3.1_16', q: 'Zweck des FTP-Protokolls?', a: 'File Transfer Protocol; zum Übertragen von Dateien zwischen Server und Client.' },
+    { id: '3.1_17', q: 'Was bewirkt der Befehl "ping"?', a: 'Prüft die Erreichbarkeit eines Hosts mittels ICMP Echo-Requests.' },
+    { id: '3.1_18', q: 'Was ist ein Proxy-Server?', a: 'Ein Stellvertreter, der Anfragen aus dem Netzwerk entgegennimmt und im Namen des Clients weiterleitet (oft für Caching/Filterung).' },
+    { id: '3.1_19', q: 'Standardport für unverschlüsseltes HTTP?', a: 'Port 80.' },
+    { id: '3.1_20', q: 'Was ist der "DORA"-Prozess bei DHCP?', a: '1. Discover, 2. Offer, 3. Request, 4. Acknowledge.' },
+
+    // --- Unterpunkt 3: IPv6 & Subnetting (10 Karten) ---
+    { id: '3.1_21', q: 'Wie lang ist eine IPv6-Adresse in Bit?', a: '128 Bit (8 Blöcke zu je 16 Bit).' },
+    { id: '3.1_22', q: 'In welcher Notation werden IPv6-Adressen geschrieben?', a: 'Hexadezimal, Blöcke getrennt durch Doppelpunkte (z.B. 2001:db8:...).' },
+    { id: '3.1_23', q: 'Was bedeutet die Kurzschreibweise "::" in IPv6?', a: 'Einmalige Ersetzung einer aufeinanderfolgenden Reihe von Null-Blöcken.' },
+    { id: '3.1_24', q: 'Was ist eine Link-Local-Adresse bei IPv6?', a: 'Eine nur im lokalen Subnetz gültige Adresse, beginnt immer mit fe80::.' },
+    { id: '3.1_25', q: 'Zweck von Subnetting?', a: 'Aufteilung eines großen Netzwerks in kleinere, logische Teilnetze zur besseren Organisation und Sicherheit.' },
+    { id: '3.1_26', q: 'Was gibt das Präfix (z.B. /64) bei einer IPv6-Adresse an?', a: 'Die Anzahl der Bits, die den Netzwerkanteil der Adresse ausmachen.' },
+    { id: '3.1_27', q: 'Was ist der "Interface Identifier" bei IPv6?', a: 'Die hinteren 64 Bit der Adresse, die den Host eindeutig identifizieren.' },
+    { id: '3.1_28', q: 'Gibt es bei IPv6 noch Broadcasts?', a: 'Nein, Broadcasts wurden durch Multicasts ersetzt.' },
+    { id: '3.1_29', q: 'Was ist "Dual Stack"?', a: 'Der gleichzeitige Betrieb von IPv4 und IPv6 auf denselben Netzwerkgeräten.' },
+    { id: '3.1_30', q: 'Wofür steht SLAAC bei IPv6?', a: 'Stateless Address Autoconfiguration; Hosts können sich ohne DHCPv6 selbst eine Adresse generieren.' },
+
+    // --- Unterpunkt 4: Virtualisierung & Docker (10 Karten) ---
+    { id: '3.1_31', q: 'Was ist ein Hypervisor Typ 1 (Bare Metal)?', a: 'Läuft direkt auf der Hardware (ohne Host-Betriebssystem), z.B. VMware ESXi.' },
+    { id: '3.1_32', q: 'Was ist ein Hypervisor Typ 2 (Hosted)?', a: 'Läuft als Anwendung auf einem installierten Betriebssystem, z.B. Oracle VirtualBox.' },
+    { id: '3.1_33', q: 'Kernunterschied zwischen VM und Container?', a: 'VM: Emuliert komplette Hardware + OS. Container: Teilt sich den Kernel des Hosts (viel leichtgewichtiger).' },
+    { id: '3.1_34', q: 'Was ist ein Docker-Image?', a: 'Eine schreibgeschützte Vorlage mit allen nötigen Infos zum Starten eines Containers.' },
+    { id: '3.1_35', q: 'Was ist ein Docker-Container?', a: 'Die laufende Instanz eines Images.' },
+    { id: '3.1_36', q: 'Zweck eines Dockerfiles?', a: 'Eine Textdatei mit Anweisungen zum automatisierten Erstellen eines Docker-Images.' },
+    { id: '3.1_37', q: 'Was bewirkt "Docker Compose"?', a: 'Ermöglicht das Definieren und Starten von Multi-Container-Anwendungen (z.B. Webserver + DB) mit einer YAML-Datei.' },
+    { id: '3.1_38', q: 'Was ist ein "Volume" in Docker?', a: 'Ein Mechanismus zur dauerhaften Speicherung von Daten (Persistenz), unabhängig vom Lebenszyklus des Containers.' },
+    { id: '3.1_39', q: 'Was ist ein Snapshot bei virtuellen Maschinen?', a: 'Das Speichern des aktuellen Zustands einer VM, um später zu diesem Punkt zurückkehren zu können.' },
+    { id: '3.1_40', q: 'Vorteil der Virtualisierung im Rechenzentrum?', a: 'Bessere Hardware-Auslastung (Serverkonsolidierung) und schnellere Bereitstellung von Systemen.' },
+
+    // --- Unterpunkt 5: Cloud Computing (10 Karten) ---
+    { id: '3.1_41', q: 'Definition von IaaS (Infrastructure as a Service)?', a: 'Bereitstellung von virtueller Hardware (Server, Speicher, Netzwerke), z.B. AWS EC2.' },
+    { id: '3.1_42', q: 'Definition von PaaS (Platform as a Service)?', a: 'Bereitstellung einer Laufzeitumgebung für Entwickler (inkl. DB, OS), z.B. Heroku.' },
+    { id: '3.1_43', q: 'Definition von SaaS (Software as a Service)?', a: 'Software wird als fertiger Dienst über den Browser genutzt, z.B. Microsoft 365.' },
+    { id: '3.1_44', q: 'Was ist eine "Public Cloud"?', a: 'Dienste werden über das öffentliche Internet von einem Provider für jedermann angeboten.' },
+    { id: '3.1_45', q: 'Was ist eine "Private Cloud"?', a: 'Die Cloud-Infrastruktur wird exklusiv für ein einzelnes Unternehmen betrieben (höhere Kontrolle/Sicherheit).' },
+    { id: '3.1_46', q: 'Was bedeutet "Hybrid Cloud"?', a: 'Kombination aus Public und Private Cloud; Daten und Anwendungen können dazwischen verschoben werden.' },
+    { id: '3.1_47', q: 'Was ist "Elasticity" im Cloud-Kontext?', a: 'Die Fähigkeit, Ressourcen automatisch an die aktuelle Last anzupassen (Scaling Up/Down).' },
+    { id: '3.1_48', q: 'Was bedeutet "Pay-per-use"?', a: 'Abrechnungsmodell, bei dem nur die tatsächlich genutzten Ressourcen bezahlt werden.' },
+    { id: '3.1_49', q: 'Zweck von "Multi-Tenancy" (Mandantenfähigkeit)?', a: 'Mehrere Kunden teilen sich dieselbe physische Infrastruktur, sind aber logisch strikt getrennt.' },
+    { id: '3.1_50', q: 'Was ist "Shared Responsibility" in der Cloud?', a: 'Provider ist für Sicherheit DER Cloud zuständig, Kunde für Sicherheit IN DER Cloud (Daten, Apps).' }
+  ],
+
+  // Topic 3.2: IT-Sicherheit (Security) (50 Karten)
+  '3.2': [
+    // --- Unterpunkt 1: Schutzziele (10 Karten) ---
+    { id: '3.2_1', q: 'Was bedeutet das Schutzziel "Vertraulichkeit" (Confidentiality)?', a: 'Daten dürfen nur von autorisierten Personen gelesen werden (Schutz vor unbefugter Preisgabe).' },
+    { id: '3.2_2', q: 'Was bedeutet das Schutzziel "Integrität" (Integrity)?', a: 'Daten müssen korrekt, vollständig und unverändert bleiben (Schutz vor unbefugter Manipulation).' },
+    { id: '3.2_3', q: 'Was bedeutet das Schutzziel "Verfügbarkeit" (Availability)?', a: 'Systeme und Daten müssen für autorisierte Benutzer zum geforderten Zeitpunkt nutzbar sein.' },
+    { id: '3.2_4', q: 'Was bedeutet das Schutzziel "Authentizität"?', a: 'Die Echtheit und Identität eines Kommunikationspartners oder einer Datenquelle muss überprüfbar sein.' },
+    { id: '3.2_5', q: 'Was bedeutet "Verbindlichkeit" (Nicht-Abstreitbarkeit)?', a: 'Ein Nutzer kann eine von ihm durchgeführte Handlung (z.B. eine Bestellung) später nicht leugnen.' },
+    { id: '3.2_6', q: 'Was ist die "CIA-Triade"?', a: 'Die drei Kern-Schutzziele der IT-Sicherheit: Confidentiality, Integrity, Availability.' },
+    { id: '3.2_7', q: 'Nenne eine Bedrohung für das Schutzziel Verfügbarkeit.', a: 'DDoS-Angriffe (Distributed Denial of Service) oder physische Zerstörung von Hardware.' },
+    { id: '3.2_8', q: 'Nenne ein Maßnahme zur Sicherstellung der Vertraulichkeit.', a: 'Verschlüsselung der Daten (Encryption).' },
+    { id: '3.2_9', q: 'Wie kann die Integrität einer Datei sichergestellt werden?', a: 'Durch die Verwendung von Prüfsummen (Hashes).' },
+    { id: '3.2_10', q: 'Was ist das Ziel einer Risikoanalyse in der IT-Sicherheit?', a: 'Identifikation von Bedrohungen und Schwachstellen, um die Eintrittswahrscheinlichkeit und Schadenshöhe zu bewerten.' },
+
+    // --- Unterpunkt 2: Kryptografie (10 Karten) ---
+    { id: '3.2_11', q: 'Was zeichnet die symmetrische Verschlüsselung aus?', a: 'Sender und Empfänger nutzen denselben geheimen Schlüssel zum Ver- und Entschlüsseln (z.B. AES).' },
+    { id: '3.2_12', q: 'Was ist das Hauptproblem der symmetrischen Verschlüsselung?', a: 'Der sichere Austausch des Schlüssels zwischen den Partnern (Key Exchange Problem).' },
+    { id: '3.2_13', q: 'Wie funktioniert die asymmetrische Verschlüsselung?', a: 'Jeder Partner hat ein Schlüsselpaar: Einen öffentlichen Schlüssel (zum Verschlüsseln) und einen privaten (zum Entschlüsseln).' },
+    { id: '3.2_14', q: 'Nenne ein bekanntes asymmetrisches Kryptoverfahren.', a: 'RSA (Rivest-Shamir-Adleman) oder Elliptic Curve Cryptography (ECC).' },
+    { id: '3.2_15', q: 'Was ist eine Hashfunktion?', a: 'Eine Einwegfunktion, die aus einer beliebig langen Eingabe eine feste Zeichenfolge (Hashwert) erzeugt.' },
+    { id: '3.2_16', q: 'Was bedeutet "Kollisionsresistenz" bei Hashfunktionen?', a: 'Es sollte praktisch unmöglich sein, zwei unterschiedliche Eingaben zu finden, die denselben Hashwert ergeben.' },
+    { id: '3.2_17', q: 'Wofür wird "Salting" bei der Speicherung von Passwörtern genutzt?', a: 'Hinzufügen einer zufälligen Zeichenfolge vor dem Hashen, um Rainbow-Table-Angriffe zu verhindern.' },
+    { id: '3.2_18', q: 'Was ist AES (Advanced Encryption Standard)?', a: 'Ein weltweit verbreiteter Standard für die symmetrische Blockverschlüsselung (sehr sicher und schnell).' },
+    { id: '3.2_19', q: 'Kann man aus einem Hashwert die Originaldaten wiederherstellen?', a: 'Nein, Hashen ist ein Einweg-Prozess (keine Entschlüsselung möglich).' },
+    { id: '3.2_20', q: 'Was ist "Ende-zu-Ende-Verschlüsselung" (E2EE)?', a: 'Daten werden beim Sender verschlüsselt und erst beim Empfänger wieder entschlüsselt; niemand dazwischen (auch der Provider nicht) kann mitlesen.' },
+
+    // --- Unterpunkt 3: Digitale Signatur & Zertifikate (10 Karten) ---
+    { id: '3.2_21', q: 'Welche Schutzziele garantiert eine digitale Signatur?', a: 'Authentizität, Integrität und Verbindlichkeit.' },
+    { id: '3.2_22', q: 'Wie wird eine digitale Signatur technisch erstellt?', a: 'Der Sender hasht die Nachricht und verschlüsselt diesen Hashwert mit seinem PRIVATEN Schlüssel.' },
+    { id: '3.2_23', q: 'Wie prüft der Empfänger eine digitale Signatur?', a: 'Er entschlüsselt die Signatur mit dem ÖFFENTLICHEN Schlüssel des Senders und vergleicht das Ergebnis mit dem selbst berechneten Hash der Nachricht.' },
+    { id: '3.2_24', q: 'Was ist ein digitales Zertifikat?', a: 'Ein digitaler Datensatz, der die Identität eines Inhabers bestätigt und dessen öffentlichen Schlüssel beglaubigt.' },
+    { id: '3.2_25', q: 'Was ist eine CA (Certification Authority)?', a: 'Eine vertrauenswürdige Instanz, die digitale Zertifikate ausstellt und deren Gültigkeit bestätigt.' },
+    { id: '3.2_26', q: 'Wofür steht die Abkürzung PKI?', a: 'Public Key Infrastructure; ein System zum Erstellen, Verwalten und Widerrufen digitaler Zertifikate.' },
+    { id: '3.2_27', q: 'Was ist der Standard X.509?', a: 'Ein weit verbreiteter Standard für das Format von Public-Key-Zertifikaten.' },
+    { id: '3.2_28', q: 'Woran erkennt ein Browser ein vertrauenswürdiges Zertifikat?', a: 'Die Signatur der CA wird gegen die im Browser vorinstallierten Root-Zertifikate geprüft.' },
+    { id: '3.2_29', q: 'Was passiert, wenn ein Zertifikat "abgelaufen" ist?', a: 'Der Browser gibt eine Sicherheitswarnung aus, da die Vertrauenskette nicht mehr garantiert ist.' },
+    { id: '3.2_30', q: 'Was ist eine "Revocation List" (CRL)?', a: 'Eine Liste gesperrter Zertifikate, die vor Ablauf ihrer Gültigkeit für ungültig erklärt wurden.' },
+
+    // --- Unterpunkt 4: Bedrohungen (10 Karten) ---
+    { id: '3.2_31', q: 'Was ist eine SQL-Injection?', a: 'Einschleusen von bösartigem SQL-Code über Benutzereingaben, um die Datenbank zu manipulieren oder Daten auszuspähen.' },
+    { id: '3.2_32', q: 'Wie verhindert man SQL-Injections effektiv?', a: 'Durch die Verwendung von Prepared Statements (Parametrisierte Abfragen) statt String-Verkettung.' },
+    { id: '3.2_33', q: 'Was ist Cross-Site Scripting (XSS)?', a: 'Einschleusen von bösartigen Skripten (meist JavaScript) in vertrauenswürdige Webseiten, die dann im Browser anderer Nutzer ausgeführt werden.' },
+    { id: '3.2_34', q: 'Unterschied zwischen persistentem und reflektiertem XSS?', a: 'Persistent: Skript wird in der DB gespeichert (z.B. Forum). Reflektiert: Skript ist Teil eines Links/Parameters und wird sofort zurückgegeben.' },
+    { id: '3.2_35', q: 'Was ist CSRF (Cross-Site Request Forgery)?', a: 'Ein Angriff, bei dem ein Nutzer unbewusst eine Aktion auf einer Webseite ausführt, bei der er bereits angemeldet ist.' },
+    { id: '3.2_36', q: 'Was ist ein Man-in-the-Middle (MitM) Angriff?', a: 'Ein Angreifer schaltet sich unbemerkt in die Kommunikation zwischen zwei Partnern ein, um Daten mitzulesen oder zu manipulieren.' },
+    { id: '3.2_37', q: 'Was versteht man unter Social Engineering?', a: 'Zwischenmenschliche Beeinflussung, um Personen dazu zu bringen, vertrauliche Informationen preiszugeben oder Sicherheitsvorkehrungen zu umgehen.' },
+    { id: '3.2_38', q: 'Was ist Phishing?', a: 'Versuch, über gefälschte Webseiten, E-Mails oder Kurznachrichten an persönliche Daten (z.B. Passwörter) zu gelangen.' },
+    { id: '3.2_39', q: 'Was charakterisiert eine Brute-Force-Attacke?', a: 'Das automatisierte Ausprobieren aller möglichen Zeichenkombinationen, um ein Passwort zu knacken.' },
+    { id: '3.2_40', q: 'Was ist Ransomware?', a: 'Schadsoftware, die Daten auf einem System verschlüsselt und für die Entschlüsselung ein Lösegeld erpresst.' },
+
+    // --- Unterpunkt 5: Abwehrmechanismen (10 Karten) ---
+    { id: '3.2_41', q: 'Was ist die Aufgabe einer Firewall?', a: 'Überwachung und Filterung des Netzwerkverkehrs basierend auf festgelegten Sicherheitsregeln.' },
+    { id: '3.2_42', q: 'Was unterscheidet eine WAF (Web Application Firewall) von einer normalen Firewall?', a: 'Eine WAF ist speziell auf den HTTP-Verkehr spezialisiert und schützt Webanwendungen vor Angriffen wie SQLi oder XSS.' },
+    { id: '3.2_43', q: 'Was ist ein IDS (Intrusion Detection System)?', a: 'Ein System, das Angriffe erkennt und meldet, aber nicht aktiv blockiert.' },
+    { id: '3.2_44', q: 'Was ist ein IPS (Intrusion Prevention System)?', a: 'Ein System, das Angriffe erkennt und sofort aktive Gegenmaßnahmen ergreift (z.B. Verbindung trennen).' },
+    { id: '3.2_45', q: 'Wofür steht VPN und was ist dessen Hauptnutzen?', a: 'Virtual Private Network; ermöglicht eine verschlüsselte und sichere Verbindung über ein unsicheres Netzwerk (z.B. Internet).' },
+    { id: '3.2_46', q: 'Was ist Zwei-Faktor-Authentisierung (2FA)?', a: 'Identitätsnachweis durch zwei unabhängige Komponenten (z.B. Passwort + SMS-Code oder Fingerabdruck).' },
+    { id: '3.2_47', q: 'Was bewirkt ein Sandboxing-Verfahren?', a: 'Ausführung von Programmen in einer isolierten Umgebung, um den Zugriff auf das restliche System zu verhindern.' },
+    { id: '3.2_48', q: 'Zweck eines Honeypots?', a: 'Ein Ködersystem, das Angreifer anlocken soll, um deren Methoden zu studieren, ohne das echte System zu gefährden.' },
+    { id: '3.2_49', q: 'Was ist das "Prinzip der geringsten Rechte" (Least Privilege)?', a: 'Nutzer und Prozesse erhalten nur exakt die Berechtigungen, die sie zwingend für ihre Aufgabe benötigen.' },
+    { id: '3.2_50', q: 'Was ist ein Antivirenprogramm?', a: 'Software, die bekannte Schadprogramme (Viren, Würmer, Trojaner) auf einem System erkennt, blockiert und ggf. entfernt.' }
+  ],
+
+  // Topic 3.3: Qualitätssicherung & DevOps (60 Karten)
+  '3.3': [
+    // --- Unterpunkt 1: Teststufen (10 Karten) ---
+    { id: '3.3_1', q: 'Was ist ein Unit-Test (Modultest)?', a: 'Testen der kleinsten funktionalen Einheiten des Codes (z.B. einzelne Methoden oder Klassen) in Isolation.' },
+    { id: '3.3_2', q: 'Was wird beim Integrationstest geprüft?', a: 'Das Zusammenspiel und die Schnittstellen zwischen verschiedenen Modulen oder Subsystemen.' },
+    { id: '3.3_3', q: 'Was ist das Ziel des Systemtests?', a: 'Testen des Gesamtsystems gegen die funktionalen und nicht-funktionalen Anforderungen in einer produktionsnahen Umgebung.' },
+    { id: '3.3_4', q: 'Wer führt primär den Abnahmetest (Acceptance Test) durch?', a: 'Der Kunde oder Endnutzer, um zu entscheiden, ob die Software vertraglich fertiggestellt ist.' },
+    { id: '3.3_5', q: 'Was ist ein Regressionstest?', a: 'Wiederholung von Tests nach Code-Änderungen, um sicherzustellen, dass bestehende Funktionen nicht beschädigt wurden.' },
+    { id: '3.3_6', q: 'Was versteht man unter einem "Rauchtest" (Smoke Test)?', a: 'Ein kurzer Oberflächentest der wichtigsten Kernfunktionen, um grobe Fehler nach einem Build sofort zu finden.' },
+    { id: '3.3_7', q: 'Was sind "Stubs" und "Mocks"?', a: 'Platzhalter für noch nicht existierende oder externe Komponenten, um die zu testende Einheit isolieren zu können.' },
+    { id: '3.3_8', q: 'In welcher Phase der Softwareentwicklung werden Unit-Tests idealerweise erstellt?', a: 'Während der Implementierung (bei TDD sogar davor).' },
+    { id: '3.3_9', q: 'Was ist ein Alpha-Test?', a: 'Ein früher Abnahmetest durch interne Mitarbeiter des Herstellers.' },
+    { id: '3.3_10', q: 'Was ist ein Beta-Test?', a: 'Ein Test der Software durch eine ausgewählte Gruppe von echten Endnutzern vor dem offiziellen Release.' },
+
+    // --- Unterpunkt 2: Testmethoden (10 Karten) ---
+    { id: '3.3_11', q: 'Was charakterisiert den Black-Box-Test?', a: 'Testen ohne Kenntnis des internen Quellcodes; Fokus liegt allein auf Input und Output.' },
+    { id: '3.3_12', q: 'Was charakterisiert den White-Box-Test?', a: 'Testen mit Kenntnis des internen Aufbaus und Quellcodes; Fokus liegt auf der Logik und Pfadabdeckung.' },
+    { id: '3.3_13', q: 'Was ist das Ziel der Äquivalenzklassenbildung?', a: 'Einteilung von Testdaten in Gruppen (Klassen), die vom System gleich behandelt werden, um die Anzahl der Testfälle zu reduzieren.' },
+    { id: '3.3_14', q: 'Warum führt man eine Grenzwertanalyse durch?', a: 'Weil Fehler besonders häufig an den Rändern von Eingabebereichen (z.B. 0, 100, Max-Int) auftreten.' },
+    { id: '3.3_15', q: 'Was ist ein statischer Test?', a: 'Prüfung von Artefakten (Code, Doku) ohne das Programm auszuführen, z.B. durch Reviews oder statische Code-Analyse.' },
+    { id: '3.3_16', q: 'Was ist ein dynamischer Test?', a: 'Prüfung der Software durch tatsächliche Ausführung des Programmcodes.' },
+    { id: '3.3_17', q: 'Was versteht man unter explorativem Testen?', a: 'Freies Testen ohne vordefinierte Testfälle, basierend auf der Erfahrung und Intuition des Testers.' },
+    { id: '3.3_18', q: 'Was ist ein Lasttest?', a: 'Überprüfung des Systemverhaltens bei der erwarteten maximalen Last.' },
+    { id: '3.3_19', q: 'Was ist ein Stresstest?', a: 'Überprüfung des Systems jenseits der Belastungsgrenze, um das Verhalten bei Überlastung zu prüfen (z.B. kontrollierter Absturz).' },
+    { id: '3.3_20', q: 'Was ist ein Usability-Test?', a: 'Beobachtung von Nutzern bei der Bedienung der Software, um Probleme in der Benutzerführung zu finden.' },
+
+    // --- Unterpunkt 3: Code Coverage (10 Karten) ---
+    { id: '3.3_21', q: 'Was gibt die Code Coverage (Testabdeckung) an?', a: 'Den prozentualen Anteil des Quellcodes, der durch automatisierte Tests ausgeführt wurde.' },
+    { id: '3.3_22', q: 'Was ist die Zeilenabdeckung (Statement Coverage)?', a: 'Misst, wie viel Prozent der ausführbaren Codezeilen mindestens einmal durchlaufen wurden.' },
+    { id: '3.3_23', q: 'Was ist die Zweigabdeckung (Branch Coverage)?', a: 'Misst, ob alle möglichen Ausgänge von Kontrollstrukturen (z.B. IF-True und IF-False) getestet wurden.' },
+    { id: '3.3_24', q: 'Was ist die Bedingungsabdeckung (Condition Coverage)?', a: 'Prüft bei komplexen Bedingungen (z.B. IF A AND B), ob alle Teilbedingungen einzeln getestet wurden.' },
+    { id: '3.3_25', q: 'Garantiert eine Testabdeckung von 100% Fehlerfreiheit?', a: 'Nein, es zeigt nur, dass der Code ausgeführt wurde, sagt aber nichts über die Korrektheit der fachlichen Logik aus.' },
+    { id: '3.3_26', q: 'Welche Abdeckung ist aussagekräftiger: Zeilen- oder Zweigabdeckung?', a: 'Die Zweigabdeckung, da sie auch leere Else-Zweige oder Verzweigungslogik erfasst.' },
+    { id: '3.3_27', q: 'Was ist "Dead Code"?', a: 'Codeabschnitte, die niemals ausgeführt werden können (wird oft durch Coverage-Tools sichtbar).' },
+    { id: '3.3_28', q: 'Warum ist eine sehr hohe Coverage (z.B. >90%) oft teuer?', a: 'Der Aufwand für Tests steigt exponentiell an, um auch die letzten, seltenen Randfälle abzudecken.' },
+    { id: '3.3_29', q: 'Was ist Pfadabdeckung?', a: 'Die mächtigste Metrik; prüft, ob alle theoretisch möglichen Pfade durch eine Funktion getestet wurden.' },
+    { id: '3.3_30', q: 'Nenne ein Tool zur Messung der Testabdeckung (sprachabhängig).', a: 'Z.B. JaCoCo (Java), Istanbul/NYC (JavaScript) oder Coverage.py (Python).' },
+
+    // --- Unterpunkt 4: TDD - Test Driven Development (10 Karten) ---
+    { id: '3.3_31', q: 'Erkläre den "Red-Green-Refactor" Zyklus bei TDD.', a: '1. Red: Test schreiben (schlägt fehl), 2. Green: Minimalen Code schreiben (Test besteht), 3. Refactor: Code verbessern.' },
+    { id: '3.3_32', q: 'Was ist der Hauptvorteil von TDD?', a: 'Höhere Codequalität, weniger Bugs und eine automatische, vollständige Testsuite von Anfang an.' },
+    { id: '3.3_33', q: 'Was bedeutet "Minimaler Code" im TDD-Kontext?', a: 'Nur so viel Code schreiben, dass der aktuelle Test gerade so besteht (kein "Overengineering").' },
+    { id: '3.3_34', q: 'Warum führt TDD oft zu besserem Softwaredesign?', a: 'Weil der Entwickler gezwungen ist, sich erst Gedanken über die Schnittstelle und Nutzung des Codes zu machen.' },
+    { id: '3.3_35', q: 'Was ist ein Unit-Testing Framework?', a: 'Eine Bibliothek zum Erstellen und Ausführen von Tests (z.B. JUnit, Jest, PyTest).' },
+    { id: '3.3_36', q: 'Was bedeutet "Refactoring" im TDD?', a: 'Struktur des Codes verbessern (Lesbarkeit, Redundanz), ohne das funktionale Verhalten zu ändern.' },
+    { id: '3.3_37', q: 'Was ist eine "Assertion" (Zusicherung) im Test?', a: 'Der Vergleich zwischen dem tatsächlichen Ergebnis und dem erwarteten Soll-Wert (z.B. assertEquals(4, calc.add(2,2))).' },
+    { id: '3.3_38', q: 'Warum schreibt man bei TDD den Test VOR dem Code?', a: 'Um sicherzustellen, dass der Test auch wirklich fehlschlagen kann und um die Anforderungen genau zu definieren.' },
+    { id: '3.3_39', q: 'Kann TDD die Entwicklungsgeschwindigkeit bremsen?', a: 'Initial ja (Mehraufwand), langfristig spart es Zeit durch weniger Debugging und leichtere Wartung.' },
+    { id: '3.3_40', q: 'Was ist BDD (Behavior Driven Development)?', a: 'Eine Erweiterung von TDD, die Tests in natürlicher Sprache (Given/When/Then) beschreibt, um das Fachverhalten zu betonen.' },
+
+    // --- Unterpunkt 5: Versionsverwaltung - Git (10 Karten) ---
+    { id: '3.3_41', q: 'Was ist der Unterschied zwischen "git commit" und "git push"?', a: 'Commit speichert Änderungen lokal in der Versionshistorie. Push überträgt die lokalen Commits an einen Remote-Server.' },
+    { id: '3.3_42', q: 'Was macht der Befehl "git pull"?', a: 'Lädt die neuesten Änderungen vom Remote-Server herunter und führt sie sofort mit dem lokalen Branch zusammen (Fetch + Merge).' },
+    { id: '3.3_43', q: 'Wofür nutzt man "Branches" in Git?', a: 'Um parallel an verschiedenen Features zu arbeiten, ohne die stabile Hauptlinie (Main/Master) zu stören.' },
+    { id: '3.3_44', q: 'Was ist ein "Merge Conflict"?', a: 'Tritt auf, wenn in zwei Branches dieselbe Zeile einer Datei unterschiedlich geändert wurde und Git sie nicht automatisch zusammenführen kann.' },
+    { id: '3.3_45', q: 'Was ist der Unterschied zwischen "Merge" und "Rebase"?', a: 'Merge fügt Zweige zusammen (erzeugt Merge-Commit). Rebase setzt lokale Änderungen "oben auf" die neuen Remote-Änderungen (linearer Verlauf).' },
+    { id: '3.3_46', q: 'Was macht "git clone"?', a: 'Erstellt eine vollständige lokale Kopie eines entfernten Repositorys inkl. der gesamten Historie.' },
+    { id: '3.3_47', q: 'Zweck der ".gitignore" Datei?', a: 'Festlegen, welche Dateien (z.B. Logfiles, Passwörter, Binaries) nicht von Git versioniert werden sollen.' },
+    { id: '3.3_48', q: 'Was ist die "Staging Area" (Index)?', a: 'Ein Zwischenbereich, in dem Änderungen gesammelt werden, bevor sie mit einem Commit final gespeichert werden (git add).' },
+    { id: '3.3_49', q: 'Was bewirkt "git checkout" (bzw. git switch)?', a: 'Wechselt den aktuellen Arbeitszustand zu einem anderen Branch oder einem bestimmten Commit.' },
+    { id: '3.3_50', q: 'Was ist ein "Pull Request" (oder Merge Request)?', a: 'Eine Anfrage, Änderungen aus einem Branch in einen anderen (meist Main) zu übernehmen, oft verbunden mit einem Code Review.' },
+
+    // --- Unterpunkt 6: CI/CD Pipelines (10 Karten) ---
+    { id: '3.3_51', q: 'Wofür steht die Abkürzung CI?', a: 'Continuous Integration: Häufiges Zusammenführen von Code-Änderungen in ein zentrales Repository mit automatisierten Tests.' },
+    { id: '3.3_52', q: 'Wofür steht die Abkürzung CD?', a: 'Continuous Delivery (manuelles Release) oder Continuous Deployment (vollautomatisches Release).' },
+    { id: '3.3_53', q: 'Was ist eine CI/CD Pipeline?', a: 'Eine automatisierte Kette von Schritten (Build, Test, Deploy), die jede Code-Änderung durchlaufen muss.' },
+    { id: '3.3_54', q: 'Was ist ein "Build-Server"?', a: 'Ein zentrales System (z.B. Jenkins, GitLab Runner), das die Pipelines ausführt und den Code kompiliert.' },
+    { id: '3.3_55', q: 'Nenne einen Vorteil von CI/CD.', a: 'Schnelleres Feedback bei Fehlern, kürzere Release-Zyklen und weniger manuelle Fehlerrisiken beim Deployment.' },
+    { id: '3.3_56', q: 'Was ist ein "Artifact" in einer Pipeline?', a: 'Das Ergebnis eines Build-Prozesses (z.B. eine .exe, .jar oder ein Docker-Image), das später ausgeliefert wird.' },
+    { id: '3.3_57', q: 'Was bedeutet "Shift Left" im DevOps-Kontext?', a: 'Test- und Sicherheitsaktivitäten so früh wie möglich in den Entwicklungsprozess (nach links) zu verlagern.' },
+    { id: '3.3_58', q: 'Was ist "Infrastructure as Code" (IaC)?', a: 'Die Verwaltung und Bereitstellung der Infrastruktur (Server, Netze) über maschinenlesbare Definitionsdateien (z.B. Terraform, Ansible).' },
+    { id: '3.3_59', q: 'Was bedeutet "Blue-Green Deployment"?', a: 'Ein Verfahren, bei dem zwei identische Umgebungen existieren; eine ist live (Blue), auf die andere wird das neue Release (Green) aufgespielt und dann umgeschaltet.' },
+    { id: '3.3_60', q: 'Was ist ein "Linter"?', a: 'Ein Tool, das den Quellcode statisch auf Stilfehler, potenzielle Bugs oder Formatierungsregeln prüft.' }
   ]
 };
