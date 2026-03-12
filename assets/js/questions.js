@@ -136,7 +136,7 @@ window.ANKI_QUESTIONS = {
 
   // Topic 1.3: UML-Modellierung (10 Karten)
   '1.3': [
-    { id: '1.3_1', q: 'Was ist the difference between Aggregation and Komposition in UML?', a: 'Aggregation (leere Raute): Das Teil kann unabhängig vom Ganzen existieren. Komposition (gefüllte Raute): Das Teil existiert nicht ohne das Ganze.' },
+    { id: '1.3_1', q: 'Was ist der Unterschied zwischen Aggregation und Komposition in UML?', a: 'Aggregation (leere Raute): Das Teil kann unabhängig vom Ganzen existieren. Komposition (gefüllte Raute): Das Teil existiert nicht ohne das Ganze.' },
     { id: '1.3_2', q: 'Wofür steht die Abkürzung UML?', a: 'Unified Modeling Language.' },
     { id: '1.3_3', q: 'Nenne die drei Hauptkategorien von UML-Diagrammen.', a: 'Strukturdiagramme, Verhaltensdiagramme, Interaktionsdiagramme.' },
     { id: '1.3_4', q: 'Was zeigt ein Klassendiagramm?', a: 'Die statische Struktur eines Systems: Klassen, Attribute, Methoden und deren Beziehungen.' },
@@ -376,7 +376,7 @@ window.ANKI_QUESTIONS = {
     { id: '2.2_20', q: 'Zweck eines Index in einer Datenbank?', a: 'Beschleunigung von Suchabfragen auf bestimmten Spalten.' },
 
     // --- Unterpunkt 3: Normalisierung (1. - 3. NF) (10 Karten) ---
-    { id: '2.2_21', q: 'Was ist das Ziel der Normalisierung?', a: 'Vermeidung von Redunanzen und Anomalien (Einfüge-, Lösch-, Änderungsanomalien).' },
+    { id: '2.2_21', q: 'Was ist das Ziel der Normalisierung?', a: 'Vermeidung von Redundanzen und Anomalien (Einfüge-, Lösch-, Änderungsanomalien).' },
     { id: '2.2_22', q: 'Wann ist eine Tabelle in der 1. Normalform (1. NF)?', a: 'Wenn alle Attribute atomar sind (nicht weiter zerlegbar) und keine Wiederholungsgruppen existieren.' },
     { id: '2.2_23', q: 'Wann ist eine Tabelle in der 2. Normalform (2. NF)?', a: 'Wenn sie in der 1. NF ist und jedes Nicht-Schlüsselattribut voll funktional vom Primärschlüssel abhängt.' },
     { id: '2.2_24', q: 'Wann ist eine Tabelle in der 3. Normalform (3. NF)?', a: 'Wenn sie in der 2. NF ist und kein Nicht-Schlüsselattribut transitiv vom Primärschlüssel abhängt.' },
@@ -584,7 +584,7 @@ window.ANKI_QUESTIONS = {
     { id: '3.2_5', q: 'Was bedeutet "Verbindlichkeit" (Nicht-Abstreitbarkeit)?', a: 'Ein Nutzer kann eine von ihm durchgeführte Handlung (z.B. eine Bestellung) später nicht leugnen.' },
     { id: '3.2_6', q: 'Was ist die "CIA-Triade"?', a: 'Die drei Kern-Schutzziele der IT-Sicherheit: Confidentiality, Integrity, Availability.' },
     { id: '3.2_7', q: 'Nenne eine Bedrohung für das Schutzziel Verfügbarkeit.', a: 'DDoS-Angriffe (Distributed Denial of Service) oder physische Zerstörung von Hardware.' },
-    { id: '3.2_8', q: 'Nenne ein Maßnahme zur Sicherstellung der Vertraulichkeit.', a: 'Verschlüsselung der Daten (Encryption).' },
+    { id: '3.2_8', q: 'Nenne eine Maßnahme zur Sicherstellung der Vertraulichkeit.', a: 'Verschlüsselung der Daten (Encryption).' },
     { id: '3.2_9', q: 'Wie kann die Integrität einer Datei sichergestellt werden?', a: 'Durch die Verwendung von Prüfsummen (Hashes).' },
     { id: '3.2_10', q: 'Was ist das Ziel einer Risikoanalyse in der IT-Sicherheit?', a: 'Identifikation von Bedrohungen und Schwachstellen, um die Eintrittswahrscheinlichkeit und Schadenshöhe zu bewerten.' },
 
@@ -944,7 +944,7 @@ window.ANKI_QUESTIONS = {
     { id: '4.3_32', q: 'Was ist die Mehrwertsteuer (Umsatzsteuer-Schuld)?', a: 'Die Steuer, die das Unternehmen beim Verkauf an seine Kunden einnimmt und ans Finanzamt abführen muss.' },
     { id: '4.3_33', q: 'Was bedeutet "Vorsteuerabzugsberechtigung"?', a: 'Unternehmen dürfen die gezahlte Vorsteuer von ihrer eingenommenen Umsatzsteuer abziehen und nur die Differenz ans Finanzamt zahlen.' },
     { id: '4.3_34', q: 'Wie berechnet man die Zahllast an das Finanzamt?', a: 'Eingenommene Umsatzsteuer - gezahlte Vorsteuer = Zahllast.' },
-    { id: '4.3_35', q: 'Was ist eine Vorsteuerüberhang?', a: 'Wenn die gezahlte Vorsteuer höher ist als die eingenommene Umsatzsteuer (Erstattungsanspruch gegenüber dem Finanzamt).' },
+    { id: '4.3_35', q: 'Was ist ein Vorsteuerüberhang?', a: 'Wenn die gezahlte Vorsteuer höher ist als die eingenommene Umsatzsteuer (Erstattungsanspruch gegenüber dem Finanzamt).' },
     { id: '4.3_36', q: 'Nenne die zwei Regelsätze der Umsatzsteuer in Deutschland.', a: '19 % (Regelsatz) und 7 % (ermäßigter Satz, z.B. für Lebensmittel, Bücher).' },
     { id: '4.3_37', q: 'Warum ist die Umsatzsteuer für Unternehmen ein "durchlaufender Posten"?', a: 'Weil sie wirtschaftlich nur den Endverbraucher belastet; Unternehmen holen sich die gezahlte Steuer zurück.' },
     { id: '4.3_38', q: 'Was ist die Umsatzsteuer-Identifikationsnummer (USt-IdNr.)?', a: 'Eine eindeutige Kennnummer für Unternehmen zur Abwicklung von Geschäften innerhalb der EU.' },
