@@ -899,5 +899,107 @@ window.ANKI_QUESTIONS = {
     { id: '4.2_48', q: 'Was ist "Schleichwerbung"?', a: 'Werbung, die nicht als solche erkennbar ist, sondern redaktionell getarnt wird.' },
     { id: '4.2_49', q: 'Was ist "Herabsetzung" eines Mitbewerbers?', a: 'Abfällige oder unwahre Äußerungen über die Waren, Dienstleistungen oder das Unternehmen eines Konkurrenten.' },
     { id: '4.2_50', q: 'Darf man Kunden von der Konkurrenz gezielt abwerben?', a: 'Grundsätzlich ja (Wettbewerb!), solange keine unlauteren Mittel wie Nötigung oder Täuschung eingesetzt werden.' }
+  ],
+
+  // Topic 4.3: Finanzierung & Buchführung (40 Karten)
+  '4.3': [
+    // --- Unterpunkt 1: Entgeltabrechnung (10 Karten) ---
+    { id: '4.3_1', q: 'Nenne die Formel für die Berechnung des Netto-Entgelts.', a: 'Bruttoentgelt - Lohnsteuer - Solidaritätszuschlag (falls anfallend) - Kirchensteuer - Sozialversicherungsbeiträge (AN-Anteil).' },
+    { id: '4.3_2', q: 'Welche Abzüge gehören zu den Sozialversicherungsbeiträgen des Arbeitnehmers?', a: 'Rentenversicherung, Arbeitslosenversicherung, Krankenversicherung und Pflegeversicherung.' },
+    { id: '4.3_3', q: 'Was ist der Unterschied zwischen Bruttolohn und Personalkosten für den Arbeitgeber?', a: 'Personalkosten = Bruttolohn + Arbeitgeberanteil zur Sozialversicherung + sonstige Lohnnebenkosten.' },
+    { id: '4.3_4', q: 'Was sind vermögenswirksame Leistungen (VWL)?', a: 'Geldleistungen des Arbeitgebers, die direkt in eine Sparform des Arbeitnehmers fließen (oft staatlich gefördert).' },
+    { id: '4.3_5', q: 'In welcher Lohnsteuerklasse befindet sich ein lediger Arbeitnehmer ohne Kinder in der Regel?', a: 'Lohnsteuerklasse I.' },
+    { id: '4.3_6', q: 'Wer zahlt die Lohnsteuer an das Finanzamt ab?', a: 'Der Arbeitgeber behält sie vom Bruttolohn ein und führt sie direkt an das Finanzamt ab.' },
+    { id: '4.3_7', q: 'Was bedeutet die Beitragsbemessungsgrenze bei der Entgeltabrechnung?', a: 'Der Teil des Einkommens, der über dieser Grenze liegt, ist beitragsfrei für die jeweilige Sozialversicherung.' },
+    { id: '4.3_8', q: 'Nenne ein Beispiel für einen steuerfreien Sachbezug.', a: 'Z.B. Jobticket, Essensgutscheine oder die private Nutzung von Arbeitsgeräten (bis zu bestimmten Freigrenzen).' },
+    { id: '4.3_9', q: 'Was ist der Solidaritätszuschlag aktuell?', a: 'Eine Ergänzungsabgabe zur Einkommensteuer, die seit 2021 für die meisten Steuerzahler weggefallen ist (nur noch bei sehr hohen Einkommen).' },
+    { id: '4.3_10', q: 'Was ist der Unterschied zwischen einem Lohn und einem Gehalt?', a: 'Lohn wird nach tatsächlich geleisteter Arbeitszeit berechnet (variabel); Gehalt ist ein fester monatlicher Betrag.' },
+
+    // --- Unterpunkt 2: Finanzierung (Innen/Außen, Kredit, Leasing) (10 Karten) ---
+    { id: '4.3_11', q: 'Was ist der Unterschied zwischen Innen- und Außenfinanzierung?', a: 'Innen: Kapital kommt aus dem Unternehmen selbst (z.B. Gewinne). Außen: Kapital kommt von externen Quellen (z.B. Bankkredit, neue Gesellschafter).' },
+    { id: '4.3_12', q: 'Was versteht man unter Selbstfinanzierung?', a: 'Einbehaltung von Gewinnen (Thesaurierung), um Investitionen zu tätigen.' },
+    { id: '4.3_13', q: 'Was ist Fremdfinanzierung?', a: 'Kapitalzufuhr durch Gläubiger, die einen Rückanspruch und Zinsanspruch haben (z.B. Darlehen).' },
+    { id: '4.3_14', q: 'Was ist Eigenfinanzierung?', a: 'Kapitalzufuhr durch die Eigentümer (Einlagen) oder durch im Unternehmen erwirtschaftete Gewinne.' },
+    { id: '4.3_15', q: 'Erkläre das Prinzip von Leasing.', a: 'Überlassung eines Gebrauchsgegenstandes gegen Zahlung einer Leasingrate; der Leasinggeber bleibt Eigentümer.' },
+    { id: '4.3_16', q: 'Vorteil von Leasing gegenüber Kreditkauf?', a: 'Schonung der Liquidität, aktuelle Technik, steuerliche Absetzbarkeit der Raten als Aufwand.' },
+    { id: '4.3_17', q: 'Was ist ein Kontokorrentkredit?', a: 'Ein kurzfristiger Kreditrahmen auf dem Geschäftskonto (Dispokredit für Unternehmen) zur Überbrückung von Liquiditätsengpässen.' },
+    { id: '4.3_18', q: 'Was versteht man unter Factoring?', a: 'Der Verkauf von offenen Forderungen an einen Finanzdienstleister zur sofortigen Liquiditätsgewinnung.' },
+    { id: '4.3_19', q: 'Was ist Finanzierung aus Abschreibungsgegenwerten?', a: 'In die Preise einkalkulierte Abschreibungen fließen als liquide Mittel zurück und stehen für Neuinvestitionen bereit.' },
+    { id: '4.3_20', q: 'Unterschied zwischen Annuitätendarlehen und Abzahlungsdarlehen?', a: 'Annuität: Konstante Rate (Zins sinkt, Tilgung steigt). Abzahlung: Konstante Tilgung (Rate sinkt, da Zins auf Restschuld sinkt).' },
+
+    // --- Unterpunkt 3: Kosten-Leistungsrechnung (Fix/Variabel, BEP) (10 Karten) ---
+    { id: '4.3_21', q: 'Was sind Fixkosten?', a: 'Kosten, die unabhängig von der Produktionsmenge anfallen (z.B. Miete, Gehälter der Verwaltung).' },
+    { id: '4.3_22', q: 'Was sind variable Kosten?', a: 'Kosten, die sich mit der Produktionsmenge ändern (z.B. Rohstoffe, Fertigungslöhne, Strom für Maschinen).' },
+    { id: '4.3_23', q: 'Was ist der Break-Even-Point (Gewinnschwelle)?', a: 'Der Punkt, an dem der Erlös genau so hoch ist wie die Gesamtkosten (Gewinn = 0).' },
+    { id: '4.3_24', q: 'Wie berechnet man den Deckungsbeitrag pro Stück?', a: 'Verkaufspreis pro Stück - variable Kosten pro Stück.' },
+    { id: '4.3_25', q: 'Was ist das Ziel der Kostenstellenrechnung?', a: 'Verteilung der Gemeinkosten auf die Orte ihrer Entstehung im Betrieb (z.B. IT-Abteilung, Fuhrpark).' },
+    { id: '4.3_26', q: 'Unterschied Einzelkosten vs. Gemeinkosten?', a: 'Einzelkosten: Direkt einem Produkt zuordenbar. Gemeinkosten: Nur indirekt über Schlüssel (z.B. Heizung) zuordenbar.' },
+    { id: '4.3_27', q: 'Was versteht man unter kalkulatorischen Kosten?', a: 'Kosten, denen kein echter Aufwand in der Buchführung gegenübersteht (z.B. kalkulatorischer Unternehmerlohn).' },
+    { id: '4.3_28', q: 'Was ist die Vollkostenrechnung?', a: 'Alle anfallenden Kosten (Fix- und Gemeinkosten) werden auf die Kostenträger verteilt.' },
+    { id: '4.3_29', q: 'Was ist die Teilkostenrechnung (Deckungsbeitragsrechnung)?', a: 'Nur die variablen Kosten werden den Produkten direkt zugerechnet; Fixkosten werden separat betrachtet.' },
+    { id: '4.3_30', q: 'Wann erzielt ein Unternehmen einen Gewinn?', a: 'Wenn die Summe der Deckungsbeiträge größer ist als die gesamten Fixkosten.' },
+
+    // --- Unterpunkt 4: Umsatzsteuer (10 Karten) ---
+    { id: '4.3_31', q: 'Was ist die Vorsteuer?', a: 'Die Umsatzsteuer, die ein Unternehmen beim Einkauf von Waren oder Dienstleistungen an andere Unternehmen zahlt.' },
+    { id: '4.3_32', q: 'Was ist die Mehrwertsteuer (Umsatzsteuer-Schuld)?', a: 'Die Steuer, die das Unternehmen beim Verkauf an seine Kunden einnimmt und ans Finanzamt abführen muss.' },
+    { id: '4.3_33', q: 'Was bedeutet "Vorsteuerabzugsberechtigung"?', a: 'Unternehmen dürfen die gezahlte Vorsteuer von ihrer eingenommenen Umsatzsteuer abziehen und nur die Differenz ans Finanzamt zahlen.' },
+    { id: '4.3_34', q: 'Wie berechnet man die Zahllast an das Finanzamt?', a: 'Eingenommene Umsatzsteuer - gezahlte Vorsteuer = Zahllast.' },
+    { id: '4.3_35', q: 'Was ist eine Vorsteuerüberhang?', a: 'Wenn die gezahlte Vorsteuer höher ist als die eingenommene Umsatzsteuer (Erstattungsanspruch gegenüber dem Finanzamt).' },
+    { id: '4.3_36', q: 'Nenne die zwei Regelsätze der Umsatzsteuer in Deutschland.', a: '19 % (Regelsatz) und 7 % (ermäßigter Satz, z.B. für Lebensmittel, Bücher).' },
+    { id: '4.3_37', q: 'Warum ist die Umsatzsteuer für Unternehmen ein "durchlaufender Posten"?', a: 'Weil sie wirtschaftlich nur den Endverbraucher belastet; Unternehmen holen sich die gezahlte Steuer zurück.' },
+    { id: '4.3_38', q: 'Was ist die Umsatzsteuer-Identifikationsnummer (USt-IdNr.)?', a: 'Eine eindeutige Kennnummer für Unternehmen zur Abwicklung von Geschäften innerhalb der EU.' },
+    { id: '4.3_39', q: 'Was ist die Kleinunternehmerregelung?', a: 'Unternehmen mit geringem Umsatz (aktuell < 22.000 €/Jahr) können sich von der Umsatzsteuerpflicht befreien lassen (keine Ausweisung, kein Abzug).' },
+    { id: '4.3_40', q: 'Was muss eine ordnungsgemäße Rechnung für den Vorsteuerabzug zwingend enthalten?', a: 'U.a. Steuernummer/USt-IdNr, Rechnungsdatum, fortlaufende Nummer, Leistungszeitpunkt, Steuersatz und -betrag.' }
+  ],
+
+  // Topic 4.4: Nachhaltigkeit & Gesellschaft (40 Karten)
+  '4.4': [
+    // --- Unterpunkt 1: Umweltschutz (10 Karten) ---
+    { id: '4.4_1', q: 'Was regelt das Elektrogesetz (ElektroG)?', a: 'Die Entsorgung, Rücknahme und Verwertung von Elektro- und Elektronikgeräten (Vermeidung von Schadstoffen in der Umwelt).' },
+    { id: '4.4_2', q: 'Was ist das Ziel des Kreislaufwirtschaftsgesetzes (KrWG)?', a: 'Ressourcenschonung durch Abfallvermeidung, Wiederverwendung und Recycling.' },
+    { id: '4.4_3', q: 'Was bedeutet "Green IT"?', a: 'Umweltfreundliche Gestaltung der IT über den gesamten Lebenszyklus (stromsparende Hardware, effiziente Kühlung, Recycling).' },
+    { id: '4.4_4', q: 'Nenne drei Maßnahmen zur Abfallvermeidung im Büro.', a: 'Papierloses Büro (Digitalisierung), Einsatz von Mehrwegsystemen, langlebige Hardware anschaffen.' },
+    { id: '4.4_5', q: 'Was ist der Unterschied zwischen Recycling und Downcycling?', a: 'Recycling: Aufbereitung zu gleichwertigen Rohstoffen. Downcycling: Aufbereitung zu Rohstoffen mit geringerer Qualität.' },
+    { id: '4.4_6', q: 'Warum ist sachgerechte Entsorgung von Batterien/Akkus wichtig?', a: 'Wegen enthaltener Schwermetalle (z.B. Lithium, Blei) und der Brandgefahr bei Beschädigung.' },
+    { id: '4.4_7', q: 'Was versteht man unter "nachhaltigem Ressourcenmanagement"?', a: 'Nutzung natürlicher Ressourcen so, dass sie sich regenerieren können oder effizient genutzt werden, um künftige Generationen nicht zu gefährden.' },
+    { id: '4.4_8', q: 'Welchen Beitrag leistet Virtualisierung zum Umweltschutz?', a: 'Serverkonsolidierung spart physische Hardware, Platz und massiv Energie für Betrieb und Kühlung.' },
+    { id: '4.4_9', q: 'Was bedeutet die Energieeffizienzklasse bei IT-Geräten?', a: 'Ein EU-weit genormtes Label zur Kennzeichnung des Energieverbrauchs (A bis G).' },
+    { id: '4.4_10', q: 'Was ist "Urban Mining"?', a: 'Die Rückgewinnung von Rohstoffen (z.B. Gold, Kupfer) aus Altgeräten und Schrott statt aus dem Bergbau.' },
+
+    // --- Unterpunkt 2: Globalisierung & Strukturwandel (10 Karten) ---
+    { id: '4.4_11', q: 'Was bedeutet Globalisierung?', a: 'Die zunehmende weltweite Verflechtung in den Bereichen Wirtschaft, Politik, Kultur und Umwelt.' },
+    { id: '4.4_12', q: 'Nenne einen Vorteil der Globalisierung für Unternehmen.', a: 'Größere Absatzmärkte, Zugang zu spezialisierten Fachkräften weltweit, günstigere Rohstoffe.' },
+    { id: '4.4_13', q: 'Was ist ein Nachteil der Globalisierung für lokale Märkte?', a: 'Erhöhter Konkurrenzdruck durch Billiglohnländer, Gefahr von Arbeitsplatzverlagerungen (Offshoring).' },
+    { id: '4.4_14', q: 'Was versteht man unter "Strukturwandel"?', a: 'Langfristige Änderung der wirtschaftlichen Struktur (z.B. Wandel von der Industriegesellschaft zur Informations-/Dienstleistungsgesellschaft).' },
+    { id: '4.4_15', q: 'Was bedeutet Outsourcing?', a: 'Die Auslagerung bisher intern erbrachter Leistungen an externe spezialisierte Dienstleister.' },
+    { id: '4.4_16', q: 'Was ist Offshoring?', a: 'Die Verlagerung von Geschäftsprozessen ins Ausland (meist zur Kostensenkung).' },
+    { id: '4.4_17', q: 'Was ist eine Freihandelszone?', a: 'Ein Gebiet, in dem mehrere Staaten auf Zölle und Handelsbeschränkungen untereinander verzichten (z.B. EU-Binnenmarkt).' },
+    { id: '4.4_18', q: 'Was beschreibt der Begriff "Digitale Transformation"?', a: 'Der durch digitale Technologien ausgelöste Veränderungsprozess in Unternehmen und der gesamten Gesellschaft.' },
+    { id: '4.4_19', q: 'Was ist der "Tertiärsektor" der Wirtschaft?', a: 'Der Dienstleistungssektor (inkl. IT, Handel, Banken), der in modernen Industrienationen den größten Anteil ausmacht.' },
+    { id: '4.4_20', q: 'Welchen Einfluss hat die Globalisierung auf den Datenschutz?', a: 'Erhöhte Komplexität durch Datentransfers in Länder mit unterschiedlichen Sicherheitsstandards (erfordert Abkommen wie EU-US Data Privacy Framework).' },
+
+    // --- Unterpunkt 3: Berufliche Fortbildung (10 Karten) ---
+    { id: '4.4_21', q: 'Was ist der Unterschied zwischen Fortbildung und Umschulung?', a: 'Fortbildung: Vertiefung/Erweiterung der Kenntnisse im erlernten Beruf. Umschulung: Ausbildung für einen völlig neuen Beruf.' },
+    { id: '4.4_22', q: 'Warum ist "lebensbegleitendes Lernen" in der IT besonders wichtig?', a: 'Wegen der extrem kurzen Innovationszyklen und des ständigen technologischen Wandels.' },
+    { id: '4.4_23', q: 'Nenne drei Formen der beruflichen Weiterbildung.', a: 'Selbststudium, Präsenzseminare, Webinare/E-Learning, Konferenzbesuche, Zertifizierungen.' },
+    { id: '4.4_24', q: 'Was ist eine Aufstiegsfortbildung?', a: 'Qualifizierung für eine höhere Hierarchieebene (z.B. Fachwirt, Techniker, Meister).' },
+    { id: '4.4_25', q: 'Welche Vorteile hat betriebliche Weiterbildung für den Arbeitgeber?', a: 'Höhere Produktivität, Bindung von Fachkräften, Steigerung der Innovationskraft.' },
+    { id: '4.4_26', q: 'Was ist Bildungsurlaub?', a: 'Bezahlte Freistellung von der Arbeit für eine bestimmte Anzahl an Tagen pro Jahr zur beruflichen oder politischen Weiterbildung (landesabhängig).' },
+    { id: '4.4_27', q: 'Was ist eine Anpassungsfortbildung?', a: 'Aktualisierung des Wissens, um mit den technischen Entwicklungen im aktuellen Job Schritt zu halten.' },
+    { id: '4.4_28', q: 'Welche Rolle spielen Zertifizierungen (z.B. AWS, Cisco, ISTQB) in der IT-Karriere?', a: 'Sie dienen als standardisierter Nachweis spezieller Fachkenntnisse und erhöhen den Marktwert.' },
+    { id: '4.4_29', q: 'Was ist informelles Lernen?', a: 'Lernen durch Erfahrung im Arbeitsalltag (Learning by doing), Austausch mit Kollegen oder Fachforen (ohne festen Lehrplan).' },
+    { id: '4.4_30', q: 'Wer trägt in der Regel die Kosten für eine angeordnete betriebliche Fortbildung?', a: 'Der Arbeitgeber.' },
+
+    // --- Unterpunkt 4: Diversity & Ethik (10 Karten) ---
+    { id: '4.4_31', q: 'Was bedeutet "Diversity" im Unternehmen?', a: 'Die Anerkennung und Wertschätzung von Vielfalt (Geschlecht, Herkunft, Alter, Religion, Behinderung, sexuelle Orientierung).' },
+    { id: '4.4_32', q: 'Nenne einen Vorteil von diversen Teams in der Softwareentwicklung.', a: 'Unterschiedliche Perspektiven führen zu kreativeren Lösungen und besserer Berücksichtigung verschiedener Nutzergruppen.' },
+    { id: '4.4_33', q: 'Was ist "Algorithmische Voreingenommenheit" (Algorithmic Bias)?', a: 'Wenn Algorithmen (z.B. KI) diskriminierende Ergebnisse liefern, weil sie auf vorurteilsbehafteten Daten trainiert wurden.' },
+    { id: '4.4_34', q: 'Was beschreibt die IT-Ethik?', a: 'Die moralische Verantwortung beim Umgang mit Informationstechnik (z.B. Privatsphäre, Überwachung, KI-Waffen).' },
+    { id: '4.4_35', q: 'Was ist "Digitaler Humanismus"?', a: 'Die Forderung, dass die Technik dem Menschen dienen muss und nicht umgekehrt; Menschenrechte müssen digital gewahrt bleiben.' },
+    { id: '4.4_36', q: 'Warum ist Barrierefreiheit auch ein ethisches Gebot?', a: 'Es geht um soziale Teilhabe und die Vermeidung von Ausgrenzung in einer digitalisierten Welt.' },
+    { id: '4.4_37', q: 'Was versteht man unter "Datenethik"?', a: 'Fragen nach dem richtigen Umgang mit Datenmengen (Wem gehören Daten? Wie transparent ist die Nutzung?).' },
+    { id: '4.4_38', q: 'Was bedeutet "Inklusion" am Arbeitsplatz?', a: 'Die gleichberechtigte Teilhabe aller Menschen am Berufsleben, unabhängig von körperlichen oder geistigen Einschränkungen.' },
+    { id: '4.4_39', q: 'Was ist "Responsible AI"?', a: 'Die Entwicklung und Nutzung von Künstlicher Intelligenz nach ethischen Prinzipien (Transparenz, Fairness, Sicherheit).' },
+    { id: '4.4_40', q: 'Welche Rolle spielen Verhaltenskodizes (Code of Conduct) in Unternehmen?', a: 'Sie legen verbindliche Regeln für ethisches und respektvolles Verhalten gegenüber Kollegen und Kunden fest.' }
   ]
 };
