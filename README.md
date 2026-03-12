@@ -1,4 +1,4 @@
-# 🚀 AP2 Tracker FIAE - Dein Lernbegleiter
+# 🚀 AP2 Tracker FIAE - Dein Lernbegleiter (v2.0 Major Update)
 
 [![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)](https://github.com/cwillam/ap2-tracker) [![License](https://img.shields.io/badge/License-AGPLv3-blue?style=for-the-badge)](LICENSE) [![Hosting](https://img.shields.io/badge/Hosted_on-IONOS-003D51?style=for-the-badge&logo=ionos)](https://ap2.cwillam.de) [![Privacy](https://img.shields.io/badge/Privacy-100%25_Local-8b5cf6?style=for-the-badge)](https://ap2.cwillam.de)
 
@@ -21,7 +21,14 @@ Der **AP2 Tracker FIAE** wurde entwickelt, um Anwendungsentwicklern eine struktu
 
 Im Gegensatz zur AP1 liegt hier der Fokus auf tiefergehenden Themen wie Software-Architektur, fortgeschrittenen SQL-Konzepten, UML-Modellierung und fachspezifischer Wirtschaftslehre.
 
-### ✨ Features
+### ✨ Highlights v2.0 (The Content Overhaul)
+
+- **Massiver Content-Ausbau:** Über **790 FIAE-spezifische Lernkarten** (Anki-Style) für alle Lernbereiche integriert.
+- **Strategie-Modus:** Intelligentes Training mittels **Spaced Repetition** – lerne Themen basierend auf deinem Wissenstand in wachsenden Intervallen.
+- **Performance Engine:** Komplett neues Rendering-System (Map-basiert) für blitzschnelle Filterung und Suche ohne UI-Verzögerung.
+- **Mobile First:** Optimiertes Design für Smartphones mit fixierter Suche, verbesserten Touch-Bereichen und intuitiverer Navigation.
+
+### 🛠️ Core Features
 
 - **Themen-Fokus:** Basierend auf dem aktuellen IHK-Prüfungskatalog (2024/25) und Analysen vergangener Prüfungen.
 - **Gewichtung:** Themen sind nach Relevanz markiert (Kritisch, Sehr Hoch, Hoch, Mittel).
@@ -43,7 +50,7 @@ Dieses Projekt setzt auf maximale Performance durch "Vanilla Web Technologies".
 | **Icons**               | FontAwesome 6 (Lokal gehostet)                                                  |
 | **Animation**           | Canvas Confetti                                                                 |
 | **IDE**                 | VS Code                                                                         |
-| **AI Pair Programming** | **Gemini 3** (Coding Logic)                                                     |
+| **AI Pair Programming** | **Gemini 2.0 Flash** (Architecture & Logic)                                     |
 
 ---
 
@@ -59,8 +66,8 @@ Datenschutz ist hier kein Werbeslogan, sondern Architektur:
 
 ## 🔮 Roadmap
 
-- [ ] **Detaillierte Lernzettel:** Zusammenfassungen für komplexe SQL-Joins, UML-Diagramme und Design Patterns.
-- [ ] **Prüfungs-Simulator:** Zufällige Fragenkombinationen zur Prüfungssimulation.
+- [ ] **Prüfungs-Simulator:** Zufällige Fragenkombinationen zur Simulation der echten Abschlussprüfung.
+- [ ] **Detaillierte Lernzettel:** Download-Bereich für komprimierte Zusammenfassungen (Cheat Sheets).
 - [ ] **PWA Support:** Installation als App auf dem Homescreen.
 
 ---

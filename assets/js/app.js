@@ -93,6 +93,15 @@ const app = {
       this.mode = mode;
       this.currentIndex = 0;
       
+      // Global Stats tracken (Session zählt ab Start)
+      if (!app.state.ankiStats) app.state.ankiStats = {};
+      if (!app.state.ankiStats[this.currentTopicId]) {
+        app.state.ankiStats[this.currentTopicId] = { total: 0, correct: 0, sessions: 0 };
+      }
+      app.state.ankiStats[this.currentTopicId].sessions++;
+      app.save();
+      app.updateStats(); // UI sofort aktualisieren
+
       // Karten für diese Session mischen (Shallow Copy + Shuffle)
       this.cards = [...this.cards].sort(() => Math.random() - 0.5);
       
@@ -147,7 +156,6 @@ const app = {
       if (this.currentIndex < this.cards.length) {
         this.showCard();
       } else {
-        gStats.sessions++;
         this.showFinish();
       }
       app.save();
