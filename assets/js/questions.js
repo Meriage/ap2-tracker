@@ -134,9 +134,9 @@ window.ANKI_QUESTIONS = {
     { id: '1.2_50', q: 'Was macht die Chain of Responsibility?', a: 'Sie gibt eine Anfrage entlang einer Kette von Empfängern weiter, bis einer sie bearbeitet.' }
   ],
 
-  // Topic 1.3: UML-Modellierung (10 Karten)
+  // Topic 1.3: UML-Modellierung (50 Karten)
   '1.3': [
-    { id: '1.3_1', q: 'Was ist the difference between Aggregation and Komposition in UML?', a: 'Aggregation (leere Raute): Das Teil kann unabhängig vom Ganzen existieren. Komposition (gefüllte Raute): Das Teil existiert nicht ohne das Ganze.' },
+    { id: '1.3_1', q: 'Was ist der Unterschied zwischen Aggregation und Komposition in UML?', a: 'Aggregation (leere Raute): Das Teil kann unabhängig vom Ganzen existieren. Komposition (gefüllte Raute): Das Teil existiert nicht ohne das Ganze.' },
     { id: '1.3_2', q: 'Wofür steht die Abkürzung UML?', a: 'Unified Modeling Language.' },
     { id: '1.3_3', q: 'Nenne die drei Hauptkategorien von UML-Diagrammen.', a: 'Strukturdiagramme, Verhaltensdiagramme, Interaktionsdiagramme.' },
     { id: '1.3_4', q: 'Was zeigt ein Klassendiagramm?', a: 'Die statische Struktur eines Systems: Klassen, Attribute, Methoden und deren Beziehungen.' },
@@ -145,7 +145,47 @@ window.ANKI_QUESTIONS = {
     { id: '1.3_7', q: 'Was beschreibt ein Zustandsdiagramm?', a: 'Die verschiedenen Zustände eines Objekts und die Ereignisse, die zu Zustandswechseln führen.' },
     { id: '1.3_8', q: 'Was ist eine Generalisierung in UML?', a: 'Eine "Ist-ein"-Beziehung (Vererbung). Eine spezialisierte Klasse übernimmt Merkmale einer allgemeinen Klasse.' },
     { id: '1.3_9', q: 'Was bedeutet die Multiplizität 1..*?', a: 'Mindestens eins, nach oben offen (beliebig viele).' },
-    { id: '1.3_10', q: 'Was stellt ein Aktivitätsdiagramm dar?', a: 'Den logischen Ablauf eines Prozesses oder Algorithmus (ähnlich einem Flussdiagramm).' }
+    { id: '1.3_10', q: 'Was stellt ein Aktivitätsdiagramm dar?', a: 'Den logischen Ablauf eines Prozesses oder Algorithmus (ähnlich einem Flussdiagramm).' },
+    { id: '1.3_11', q: 'Was zeigt ein Objektdiagramm?', a: 'Eine Momentaufnahme der Instanzen (Objekte) und ihrer Beziehungen zu einem bestimmten Zeitpunkt.' },
+    { id: '1.3_12', q: 'Wozu dient ein Paketdiagramm?', a: 'Zur logischen Gruppierung von Modellelementen und zur Darstellung von Abhängigkeiten zwischen Paketen.' },
+    { id: '1.3_13', q: 'Was beschreibt ein Komponentendiagramm?', a: 'Die modulare Struktur des Systems: Komponenten, ihre Schnittstellen und Abhängigkeiten.' },
+    { id: '1.3_14', q: 'Was ist der Fokus eines Verteilungsdiagramms (Deployment Diagram)?', a: 'Die physische Hardware (Knoten) und die darauf installierte Software (Artefakte).' },
+    { id: '1.3_15', q: 'Was bedeutet das Sichtbarkeitssymbol "+" in UML?', a: 'Public: Das Element ist für alle anderen Klassen sichtbar.' },
+    { id: '1.3_16', q: 'Was bedeutet das Sichtbarkeitssymbol "-" in UML?', a: 'Private: Nur die Klasse selbst kann das Element sehen/nutzen.' },
+    { id: '1.3_17', q: 'Was bedeutet das Sichtbarkeitssymbol "#" in UML?', a: 'Protected: Sichtbar für die Klasse selbst und ihre Subklassen.' },
+    { id: '1.3_18', q: 'Was bedeutet das Sichtbarkeitssymbol "~" in UML?', a: 'Package: Sichtbar für alle Klassen innerhalb desselben Pakets.' },
+    { id: '1.3_19', q: 'Wie werden abstrakte Klassen in UML dargestellt?', a: 'Der Klassenname wird kursiv geschrieben oder mit dem Stereotyp <<abstract>> versehen.' },
+    { id: '1.3_20', q: 'Wie kennzeichnet man statische Attribute oder Methoden?', a: 'Sie werden unterstrichen dargestellt.' },
+    { id: '1.3_21', q: 'Wie wird ein Interface in einem Klassendiagramm dargestellt?', a: 'Als Rechteck mit dem Stereotyp <<interface>> oder als kleiner Kreis (Lollipop-Notation).' },
+    { id: '1.3_22', q: 'Was symbolisiert eine gestrichelte Linie mit Pfeilspitze?', a: 'Eine Abhängigkeitsbeziehung (Dependency). Eine Änderung in der Zielklasse kann die Quellklasse beeinflussen.' },
+    { id: '1.3_23', q: 'Was bedeutet eine gestrichelte Linie mit einer hohlen Dreieckspitze?', a: 'Realization: Eine Klasse implementiert ein Interface oder eine abstrakte Klasse.' },
+    { id: '1.3_24', q: 'Unterschied zwischen Assoziation und Abhängigkeit?', a: 'Assoziation: Strukturelle, dauerhafte Beziehung (Feld in der Klasse). Abhängigkeit: Kurzfristige Nutzung (z.B. lokaler Parameter).' },
+    { id: '1.3_25', q: 'Wie benennt man Assoziationen sinnvoll?', a: 'Durch ein Verb und ggf. eine Leserichtung (kleines Dreieck), z.B. "bestellt >".' },
+    { id: '1.3_26', q: 'Was bedeutet Navigierbarkeit bei einer Assoziation?', a: 'Ein Pfeil am Ende zeigt an, dass ein Objekt das andere kennt, aber nicht zwingend umgekehrt.' },
+    { id: '1.3_27', q: 'Was bedeutet die <<include>> Beziehung bei Use Cases?', a: 'Ein Anwendungsfall ist zwingend Teil eines anderen (Aufsplittung in Teilaufgaben).' },
+    { id: '1.3_28', q: 'Was bedeutet die <<extend>> Beziehung bei Use Cases?', a: 'Ein optionaler oder bedingter Schritt, der einen anderen Anwendungsfall erweitert.' },
+    { id: '1.3_29', q: 'Was stellt der Systemrahmen (System Boundary) im Use-Case-Diagramm dar?', a: 'Die Grenze zwischen dem zu entwickelnden System und den externen Akteuren.' },
+    { id: '1.3_30', q: 'Was ist eine Lebenslinie (Lifeline) im Sequenzdiagramm?', a: 'Die vertikale gestrichelte Linie, die die Existenz eines Objekts über die Zeit darstellt.' },
+    { id: '1.3_31', q: 'Wie wird eine synchrone Nachricht im Sequenzdiagramm gezeichnet?', a: 'Durchgezogene Linie mit ausgefüllter Pfeilspitze.' },
+    { id: '1.3_32', q: 'Wie wird eine asynchrone Nachricht dargestellt?', a: 'Durchgezogene Linie mit offener Pfeilspitze (Spitzenwinkel).' },
+    { id: '1.3_33', q: 'Wie wird eine Antwortnachricht (Return) dargestellt?', a: 'Gestrichelte Linie mit offener Pfeilspitze.' },
+    { id: '1.3_34', q: 'Was bedeutet das Fragment "alt" im Sequenzdiagramm?', a: 'Alternativen: Entspricht einer If-Else oder Switch-Anweisung.' },
+    { id: '1.3_35', q: 'Was bedeutet das Fragment "opt" im Sequenzdiagramm?', a: 'Optional: Der Block wird nur ausgeführt, wenn eine Bedingung erfüllt ist (reines If).' },
+    { id: '1.3_36', q: 'Wofür steht das Fragment "loop" im Sequenzdiagramm?', a: 'Iteration: Wiederholung eines Nachrichtenablaufs (Schleife).' },
+    { id: '1.3_37', q: 'Was ist ein Entscheidungsknoten (Decision Node) im Aktivitätsdiagramm?', a: 'Eine Raute, die den Kontrollfluss basierend auf Bedingungen (Guards) aufteilt.' },
+    { id: '1.3_38', q: 'Was ist ein Zusammenführungsknoten (Merge Node)?', a: 'Eine Raute, die mehrere alternative Kontrollflüsse wieder zusammenführt.' },
+    { id: '1.3_39', q: 'Was bewirkt ein Split/Gabelung (Fork Node)?', a: 'Ein dicker Balken, der einen Kontrollfluss in mehrere parallel ablaufende Zweige aufteilt.' },
+    { id: '1.3_40', q: 'Was bewirkt eine Vereinigung (Join Node)?', a: 'Ein dicker Balken, der parallele Zweige synchronisiert und wieder zu einem Fluss vereint.' },
+    { id: '1.3_41', q: 'Wie wird der Startpunkt im Aktivitätsdiagramm dargestellt?', a: 'Ein ausgefüllter schwarzer Kreis (Initial Node).' },
+    { id: '1.3_42', q: 'Wie wird das Ende eines Prozesses dargestellt?', a: 'Ein ausgefüllter Kreis mit einem Ring darum (Activity Final Node).' },
+    { id: '1.3_43', q: 'Was sind Verantwortlichkeitsbereiche (Swimlanes/Partitions)?', a: 'Spalten oder Zeilen, die Aktionen bestimmten Akteuren oder Systemteilen zuordnen.' },
+    { id: '1.3_44', q: 'Was ist ein Übergang (Transition) im Zustandsdiagramm?', a: 'Ein Pfeil zwischen Zuständen, der durch ein Ereignis ausgelöst wird.' },
+    { id: '1.3_45', q: 'Was ist eine Wächterbedingung (Guard) in UML?', a: 'Eine Bedingung in eckigen Klammern [ ], die wahr sein muss, damit ein Übergang stattfindet.' },
+    { id: '1.3_46', q: 'Was ist eine Entry-Aktion in einem Zustand?', a: 'Eine Aktion, die sofort beim Eintreten in den Zustand ausgeführt wird.' },
+    { id: '1.3_47', q: 'Was ist eine Exit-Aktion in einem Zustand?', a: 'Eine Aktion, die kurz vor dem Verlassen des Zustands ausgeführt wird.' },
+    { id: '1.3_48', q: 'Was ist ein Eigenübergang (Self-Transition)?', a: 'Ein Übergang, der zum selben Zustand zurückführt (löst erneut Entry/Exit Aktionen aus).' },
+    { id: '1.3_49', q: 'Was ist ein Stereotyp in UML?', a: 'Ein Erweiterungsmechanismus, um Elementen eine spezifische Bedeutung zu geben (Notation: <<text>>).' },
+    { id: '1.3_50', q: 'Was beschreibt ein UML-Profil?', a: 'Eine Sammlung von Stereotypen und Constraints für einen bestimmten Anwendungsbereich (z.B. UML-Profil für Java).' }
   ],
 
   // Topic 1.4: Software-Architektur & Schnittstellen (50 Karten)
@@ -376,7 +416,7 @@ window.ANKI_QUESTIONS = {
     { id: '2.2_20', q: 'Zweck eines Index in einer Datenbank?', a: 'Beschleunigung von Suchabfragen auf bestimmten Spalten.' },
 
     // --- Unterpunkt 3: Normalisierung (1. - 3. NF) (10 Karten) ---
-    { id: '2.2_21', q: 'Was ist das Ziel der Normalisierung?', a: 'Vermeidung von Redunanzen und Anomalien (Einfüge-, Lösch-, Änderungsanomalien).' },
+    { id: '2.2_21', q: 'Was ist das Ziel der Normalisierung?', a: 'Vermeidung von Redundanzen und Anomalien (Einfüge-, Lösch-, Änderungsanomalien).' },
     { id: '2.2_22', q: 'Wann ist eine Tabelle in der 1. Normalform (1. NF)?', a: 'Wenn alle Attribute atomar sind (nicht weiter zerlegbar) und keine Wiederholungsgruppen existieren.' },
     { id: '2.2_23', q: 'Wann ist eine Tabelle in der 2. Normalform (2. NF)?', a: 'Wenn sie in der 1. NF ist und jedes Nicht-Schlüsselattribut voll funktional vom Primärschlüssel abhängt.' },
     { id: '2.2_24', q: 'Wann ist eine Tabelle in der 3. Normalform (3. NF)?', a: 'Wenn sie in der 2. NF ist und kein Nicht-Schlüsselattribut transitiv vom Primärschlüssel abhängt.' },
@@ -584,7 +624,7 @@ window.ANKI_QUESTIONS = {
     { id: '3.2_5', q: 'Was bedeutet "Verbindlichkeit" (Nicht-Abstreitbarkeit)?', a: 'Ein Nutzer kann eine von ihm durchgeführte Handlung (z.B. eine Bestellung) später nicht leugnen.' },
     { id: '3.2_6', q: 'Was ist die "CIA-Triade"?', a: 'Die drei Kern-Schutzziele der IT-Sicherheit: Confidentiality, Integrity, Availability.' },
     { id: '3.2_7', q: 'Nenne eine Bedrohung für das Schutzziel Verfügbarkeit.', a: 'DDoS-Angriffe (Distributed Denial of Service) oder physische Zerstörung von Hardware.' },
-    { id: '3.2_8', q: 'Nenne ein Maßnahme zur Sicherstellung der Vertraulichkeit.', a: 'Verschlüsselung der Daten (Encryption).' },
+    { id: '3.2_8', q: 'Nenne eine Maßnahme zur Sicherstellung der Vertraulichkeit.', a: 'Verschlüsselung der Daten (Encryption).' },
     { id: '3.2_9', q: 'Wie kann die Integrität einer Datei sichergestellt werden?', a: 'Durch die Verwendung von Prüfsummen (Hashes).' },
     { id: '3.2_10', q: 'Was ist das Ziel einer Risikoanalyse in der IT-Sicherheit?', a: 'Identifikation von Bedrohungen und Schwachstellen, um die Eintrittswahrscheinlichkeit und Schadenshöhe zu bewerten.' },
 
@@ -944,7 +984,7 @@ window.ANKI_QUESTIONS = {
     { id: '4.3_32', q: 'Was ist die Mehrwertsteuer (Umsatzsteuer-Schuld)?', a: 'Die Steuer, die das Unternehmen beim Verkauf an seine Kunden einnimmt und ans Finanzamt abführen muss.' },
     { id: '4.3_33', q: 'Was bedeutet "Vorsteuerabzugsberechtigung"?', a: 'Unternehmen dürfen die gezahlte Vorsteuer von ihrer eingenommenen Umsatzsteuer abziehen und nur die Differenz ans Finanzamt zahlen.' },
     { id: '4.3_34', q: 'Wie berechnet man die Zahllast an das Finanzamt?', a: 'Eingenommene Umsatzsteuer - gezahlte Vorsteuer = Zahllast.' },
-    { id: '4.3_35', q: 'Was ist eine Vorsteuerüberhang?', a: 'Wenn die gezahlte Vorsteuer höher ist als die eingenommene Umsatzsteuer (Erstattungsanspruch gegenüber dem Finanzamt).' },
+    { id: '4.3_35', q: 'Was ist ein Vorsteuerüberhang?', a: 'Wenn die gezahlte Vorsteuer höher ist als die eingenommene Umsatzsteuer (Erstattungsanspruch gegenüber dem Finanzamt).' },
     { id: '4.3_36', q: 'Nenne die zwei Regelsätze der Umsatzsteuer in Deutschland.', a: '19 % (Regelsatz) und 7 % (ermäßigter Satz, z.B. für Lebensmittel, Bücher).' },
     { id: '4.3_37', q: 'Warum ist die Umsatzsteuer für Unternehmen ein "durchlaufender Posten"?', a: 'Weil sie wirtschaftlich nur den Endverbraucher belastet; Unternehmen holen sich die gezahlte Steuer zurück.' },
     { id: '4.3_38', q: 'Was ist die Umsatzsteuer-Identifikationsnummer (USt-IdNr.)?', a: 'Eine eindeutige Kennnummer für Unternehmen zur Abwicklung von Geschäften innerhalb der EU.' },
