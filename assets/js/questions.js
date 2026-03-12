@@ -836,5 +836,68 @@ window.ANKI_QUESTIONS = {
     { id: '4.1_48', q: 'Was bedeutet "Paritätische Finanzierung"?', a: 'Arbeitgeber und Arbeitnehmer teilen sich die Beiträge zur Versicherung jeweils zur Hälfte (50/50).' },
     { id: '4.1_49', q: 'Welche Versicherung zahlt das "Pflegegeld"?', a: 'Die gesetzliche Pflegeversicherung.' },
     { id: '4.1_50', q: 'Was ist das Äquivalenzprinzip (vor allem in der Rentenversicherung)?', a: 'Die Höhe der Leistungen (Rente) hängt von der Höhe und Dauer der eingezahlten Beiträge ab.' }
+  ],
+
+  // Topic 4.2: Der Betrieb & Markt (50 Karten)
+  '4.2': [
+    // --- Unterpunkt 1: Rechtsformen (10 Karten) ---
+    { id: '4.2_1', q: 'Was ist ein Einzelunternehmen bezüglich der Haftung?', a: 'Der Inhaber haftet allein und unbeschränkt mit seinem gesamten Geschäfts- und Privatvermögen.' },
+    { id: '4.2_2', q: 'Was ist das Mindeststammkapital einer GmbH?', a: '25.000 Euro (bei Gründung müssen mindestens 12.500 Euro eingezahlt sein).' },
+    { id: '4.2_3', q: 'Was ist das Mindestgrundkapital einer Aktiengesellschaft (AG)?', a: '50.000 Euro.' },
+    { id: '4.2_4', q: 'Nenne die drei Organe einer AG.', a: 'Vorstand (Leitung), Aufsichtsrat (Kontrolle), Hauptversammlung (Aktionäre).' },
+    { id: '4.2_5', q: 'Wer haftet bei einer GmbH & Co. KG unbeschränkt?', a: 'Die GmbH als Komplementär (Vollhafter); die Haftung der GmbH selbst ist jedoch auf ihr Gesellschaftsvermögen begrenzt.' },
+    { id: '4.2_6', q: 'Was ist der Unterschied zwischen Komplementär und Kommanditist?', a: 'Komplementär: Haftet unbeschränkt (auch privat). Kommanditist: Haftet nur mit seiner Einlage (Teilhafter).' },
+    { id: '4.2_7', q: 'Ab wann muss ein Einzelunternehmen als e.K. im Handelsregister stehen?', a: 'Wenn ein nach Art und Umfang in kaufmännischer Weise eingerichteter Geschäftsbetrieb erforderlich ist.' },
+    { id: '4.2_8', q: 'Was ist eine "UG (haftungsbeschränkt)"?', a: 'Die "Mini-GmbH"; kann mit nur 1 Euro Stammkapital gegründet werden, muss aber Rücklagen bilden, bis 25.000 Euro erreicht sind.' },
+    { id: '4.2_9', q: 'Was ist das oberste Willensbildungsorgan einer GmbH?', a: 'Die Gesellschafterversammlung.' },
+    { id: '4.2_10', q: 'Welche Rechtsform ist eine juristische Person des Privatrechts?', a: 'Kapitalgesellschaften wie GmbH, AG, UG.' },
+
+    // --- Unterpunkt 2: Marktformen (10 Karten) ---
+    { id: '4.2_11', q: 'Was charakterisiert ein Monopol?', a: 'Nur ein Anbieter steht vielen Nachfrägern gegenüber (oder umgekehrt).' },
+    { id: '4.2_12', q: 'Was ist ein Oligopol?', a: 'Wenige Anbieter stehen vielen Nachfrägern gegenüber (z.B. Tankstellen, Mobilfunkanbieter).' },
+    { id: '4.2_13', q: 'Was ist ein Polypol?', a: 'Viele Anbieter stehen vielen Nachfrägern gegenüber (vollkommene Konkurrenz).' },
+    { id: '4.2_14', q: 'Was versteht man unter einem "Angebotsmonopol"?', a: 'Ein einziger Verkäufer beherrscht den Markt für ein Produkt oder eine Dienstleistung.' },
+    { id: '4.2_15', q: 'Was ist ein "Nachfrageoligopol" (Oligopson)?', a: 'Viele Anbieter stehen nur wenigen großen Nachfrägern gegenüber (z.B. Molkereien vs. Supermarktketten).' },
+    { id: '4.2_16', q: 'Wie entsteht ein Gleichgewichtspreis im Polypol?', a: 'Durch das Zusammentreffen von Angebot und Nachfrage; der Preis räumt den Markt.' },
+    { id: '4.2_17', q: 'Was passiert mit der Nachfrage bei steigenden Preisen (Normalfall)?', a: 'Die nachgefragte Menge sinkt.' },
+    { id: '4.2_18', q: 'Was ist ein "zweiseitiges Oligopol"?', a: 'Wenige Anbieter stehen wenigen Nachfrägern gegenüber.' },
+    { id: '4.2_19', q: 'Was ist ein "natürliches Monopol"?', a: 'Ein Monopol, das durch extrem hohe Fixkosten (z.B. Schienennetz, Stromleitungen) entsteht, die Wettbewerb unwirtschaftlich machen.' },
+    { id: '4.2_20', q: 'Welches Gesetz schützt in Deutschland den Wettbewerb vor Kartellbildung?', a: 'Das GWB (Gesetz gegen Wettbewerbsbeschränkungen).' },
+
+    // --- Unterpunkt 3: Ziele (Ökonomisch, Ökologisch, Sozial) (10 Karten) ---
+    { id: '4.2_21', q: 'Was ist ein ökonomisches Ziel eines Unternehmens?', a: 'Gewinnmaximierung, Umsatzsteigerung, Erhöhung des Marktanteils.' },
+    { id: '4.2_22', q: 'Nenne ein Beispiel für ein ökologisches Ziel.', a: 'Ressourcenschonung, CO2-Reduktion, Einsatz recycelbarer Materialien.' },
+    { id: '4.2_23', q: 'Nenne ein Beispiel für ein soziales Ziel.', a: 'Sicherung der Arbeitsplätze, betriebliche Altersvorsorge, gerechte Entlohnung.' },
+    { id: '4.2_24', q: 'Was beschreibt eine "Zielharmonie"?', a: 'Das Erreichen eines Ziels fördert gleichzeitig das Erreichen eines anderen Ziels (z.B. Abfallvermeidung spart Entsorgungskosten).' },
+    { id: '4.2_25', q: 'Was ist ein "Zielkonflikt"?', a: 'Das Erreichen eines Ziels behindert das Erreichen eines anderen (z.B. Lohnerhöhung vs. Gewinnmaximierung).' },
+    { id: '4.2_26', q: 'Was ist eine "Zielindifferenz"?', a: 'Die Erfüllung eines Ziels hat keinen Einfluss auf ein anderes Ziel.' },
+    { id: '4.2_27', q: 'Wofür steht die SMART-Formel bei der Zieldefinition?', a: 'Spezifisch, Messbar, Attraktiv (oder Akzeptiert), Realistisch, Terminiert.' },
+    { id: '4.2_28', q: 'Was bedeutet "Corporate Social Responsibility" (CSR)?', a: 'Die gesellschaftliche Verantwortung von Unternehmen über gesetzliche Pflichten hinaus.' },
+    { id: '4.2_29', q: 'Was ist das Ziel der "Gewinnmaximierung"?', a: 'Erzielung des höchstmöglichen Unterschieds zwischen Erlösen und Kosten.' },
+    { id: '4.2_30', q: 'Was beschreibt das "ökonomische Prinzip" (Minimalprinzip)?', a: 'Ein vorgegebenes Ziel mit möglichst geringen Mitteln (Einsatz) erreichen.' },
+
+    // --- Unterpunkt 4: Marketing-Mix (4Ps) (10 Karten) ---
+    { id: '4.2_31', q: 'Nenne die 4 Ps des klassischen Marketing-Mix.', a: 'Product (Produktpolitik), Price (Preispolitik), Place (Distributionspolitik), Promotion (Kommunikationspolitik).' },
+    { id: '4.2_32', q: 'Was umfasst die "Produktpolitik" (Product)?', a: 'Qualität, Design, Verpackung, Markenname, Kundendienst, Sortimentsgestaltung.' },
+    { id: '4.2_33', q: 'Was regelt die "Preispolitik" (Price)?', a: 'Preisgestaltung, Rabatte, Skonti, Liefer- und Zahlungsbedingungen.' },
+    { id: '4.2_34', q: 'Was ist das Ziel der "Distributionspolitik" (Place)?', a: 'Die Wahl der Vertriebswege (direkt oder indirekt), um das Produkt zum Kunden zu bringen.' },
+    { id: '4.2_35', q: 'Was gehört zur "Kommunikationspolitik" (Promotion)?', a: 'Werbung, Public Relations (PR), Sponsoring, Verkaufsförderung.' },
+    { id: '4.2_36', q: 'Unterschied zwischen direktem und indirektem Vertrieb?', a: 'Direkt: Verkauf direkt vom Hersteller an den Endkunden (z.B. eigener Webshop). Indirekt: Über Zwischenhändler (z.B. Einzelhandel).' },
+    { id: '4.2_37', q: 'Was beschreibt der Produktlebenszyklus?', a: 'Die Phasen eines Produkts am Markt: Einführung, Wachstum, Reife, Sättigung, Degeneration.' },
+    { id: '4.2_38', q: 'Was ist eine "Penetrationsstrategie" bei der Preisbildung?', a: 'Ein niedriger Einführungspreis, um schnell Marktanteile zu gewinnen.' },
+    { id: '4.2_39', q: 'Was ist eine "Skimmingstrategie" (Abschöpfung)?', a: 'Ein hoher Einführungspreis, der später schrittweise gesenkt wird (oft bei Technik-Neuheiten).' },
+    { id: '4.2_40', q: 'Was ist das AIDA-Modell in der Werbung?', a: 'Attention (Aufmerksamkeit), Interest (Interesse), Desire (Wunsch), Action (Handlung).' },
+
+    // --- Unterpunkt 5: Wettbewerbsrecht (UWG) (10 Karten) ---
+    { id: '4.2_41', q: 'Wofür steht die Abkürzung UWG?', a: 'Gesetz gegen den unlauteren Wettbewerb.' },
+    { id: '4.2_42', q: 'Was ist das Hauptziel des UWG?', a: 'Schutz der Mitbewerber, der Verbraucher und der Allgemeinheit vor unfairem Wettbewerb.' },
+    { id: '4.2_43', q: 'Was versteht man unter "irreführender Werbung"?', a: 'Werbung mit unwahren Angaben oder Täuschungen über Merkmale des Produkts (z.B. Preis, Herkunft).' },
+    { id: '4.2_44', q: 'Ist vergleichende Werbung in Deutschland erlaubt?', a: 'Ja, sofern sie sachlich ist, nicht herabsetzend wirkt und nicht irreführend ist.' },
+    { id: '4.2_45', q: 'Was ist "unzumutbare Belästigung" laut UWG?', a: 'Z.B. Telefonwerbung gegenüber Verbrauchern ohne deren vorherige ausdrückliche Einwilligung (Cold Calling).' },
+    { id: '4.2_46', q: 'Was ist eine "Abmahnung" im Wettbewerbsrecht?', a: 'Die Aufforderung an einen Mitbewerber, eine unlautere Wettbewerbshandlung einzustellen (Vermeidung eines Rechtsstreits).' },
+    { id: '4.2_47', q: 'Was ist eine Unterlassungserklärung?', a: 'Ein Vertrag, in dem sich der Verletzer verpflichtet, die unlautere Handlung künftig nicht zu wiederholen (meist mit Vertragsstrafe).' },
+    { id: '4.2_48', q: 'Was ist "Schleichwerbung"?', a: 'Werbung, die nicht als solche erkennbar ist, sondern redaktionell getarnt wird.' },
+    { id: '4.2_49', q: 'Was ist "Herabsetzung" eines Mitbewerbers?', a: 'Abfällige oder unwahre Äußerungen über die Waren, Dienstleistungen oder das Unternehmen eines Konkurrenten.' },
+    { id: '4.2_50', q: 'Darf man Kunden von der Konkurrenz gezielt abwerben?', a: 'Grundsätzlich ja (Wettbewerb!), solange keine unlauteren Mittel wie Nötigung oder Täuschung eingesetzt werden.' }
   ]
 };
