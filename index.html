@@ -487,23 +487,21 @@
 
       <!-- Content Container -->
       <div id="contentList" class="space-y-8 pb-20 min-h-[300px]"></div>
-
-      </div>
-      </main>
+    </main>
 
       <!-- ANKI Lernkarten Modal (Full Screen & Opaque) -->
       <div id="ankiModal" class="fixed inset-0 z-[9999] hidden bg-[#020617] no-print flex flex-col">
       <!-- Modal Header (Solid) -->
       <div class="p-4 border-b border-dark-border flex items-center justify-between bg-[#0f172a] shrink-0">
-        <div class="flex-1"></div>
-        <div class="flex flex-col items-center text-center flex-[2]">
-          <h2 id="ankiTopicTitle" class="text-sm font-bold text-white truncate max-w-[200px] sm:max-w-md">Thema</h2>
+        <div class="flex-1 sm:flex hidden"></div>
+        <div class="flex flex-col items-center text-center flex-[3] min-w-0 px-2">
+          <h2 id="ankiTopicTitle" class="text-sm font-bold text-white truncate w-full">Thema</h2>
           <div id="ankiModeBadge" class="flex items-center justify-center gap-1.5 mt-0.5">
             <!-- Wird per JS befüllt -->
           </div>
         </div>
         <div class="flex-1 flex justify-end">
-          <button onclick="app.anki.close()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-[#020617] border border-dark-border text-dark-muted hover:text-white transition-all hover:scale-105 active:scale-95">
+          <button onclick="app.anki.close()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-[#020617] border border-dark-border text-dark-muted hover:text-white transition-all hover:scale-105 active:scale-95 shrink-0">
             <i class="fa-solid fa-xmark text-lg"></i>
           </button>
         </div>
@@ -614,45 +612,44 @@
 
         </div>
       </div>
-      </div>
+    </div>
 
-      <!-- Footer -->            <footer class="border-t border-dark-border bg-dark-card mt-auto py-8 no-print">
-              <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-dark-muted">
-                <div class="flex items-center gap-2">
-                  <span class="font-bold text-white">cwillam</span> &copy; 2026
-                </div>
-                <div class="flex gap-6 items-center flex-wrap justify-center">
-                  <a href="https://buymeacoffee.com/cwillam" target="_blank" class="hover:text-[#FFDD00] transition flex items-center gap-2 font-bold">
-                    <i class="fa-solid fa-mug-hot"></i> Support
-                  </a>              
-              <!-- Footer Updates -->
-              <a
-                href="updates.html"
-                class="group flex items-center gap-2 px-3 py-1.5 rounded-full bg-dark-card border border-dark-border hover:border-dark-accent transition-all"
-              >
-                <div class="relative flex h-2 w-2">
-                  <span
-                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"
-                  ></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2 bg-violet-500"></span>
-                </div>
-                <span class="text-xs font-bold text-dark-muted group-hover:text-white transition-colors"
-                  >Updates</span
-                >
-              </a>
-    
-              <a href="https://github.com/cwillam" target="_blank" class="hover:text-white transition">
-                <i class="fa-brands fa-github mr-1"></i>GitHub
-              </a>
-              <button onclick="app.openLegal('impressum')" class="hover:text-white transition">
-                Impressum
-              </button>
-              <button onclick="app.openLegal('privacy')" class="hover:text-white transition">
-                Datenschutz
-              </button>
+    <!-- Footer -->
+    <footer class="border-t border-dark-border bg-dark-card mt-auto py-8 no-print">
+      <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-dark-muted">
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-white">cwillam</span> &copy; 2026
+        </div>
+        <div class="flex gap-6 items-center flex-wrap justify-center">
+          <a href="https://buymeacoffee.com/cwillam" target="_blank" class="hover:text-[#FFDD00] transition flex items-center gap-2 font-bold">
+            <i class="fa-solid fa-mug-hot"></i> Support
+          </a>
+          <!-- Footer Updates -->
+          <a
+            href="updates.html"
+            class="group flex items-center gap-2 px-3 py-1.5 rounded-full bg-dark-card border border-dark-border hover:border-dark-accent transition-all"
+          >
+            <div class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"
+              ></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-violet-500"></span>
             </div>
-          </div>
-        </footer>
+            <span class="text-xs font-bold text-dark-muted group-hover:text-white transition-colors">Updates</span>
+          </a>
+
+          <a href="https://github.com/cwillam" target="_blank" class="hover:text-white transition">
+            <i class="fa-brands fa-github mr-1"></i>GitHub
+          </a>
+          <button onclick="app.openLegal('impressum')" class="hover:text-white transition">
+            Impressum
+          </button>
+          <button onclick="app.openLegal('privacy')" class="hover:text-white transition">
+            Datenschutz
+          </button>
+        </div>
+      </div>
+    </footer>
     
         <!-- Templates -->
         <template id="tpl-category">
